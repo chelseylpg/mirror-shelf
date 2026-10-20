@@ -1,4 +1,3 @@
-markdown
 # Mirror Shelf
 
 Where every kid can find themselves in play.
