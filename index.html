@@ -1,0 +1,684 @@
+<!doctype html><html lang="en"><head><meta charset=utf8><meta name="description" content="Toys, books and care products that reflect many races, cultures and families, curated for transracial and multicultural families."><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body><title>Mirror Shelf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style id="ms-style">
+/* Layout: a tinted hero band (headline + large photo), a three-step strip, a sticky filter bar, a card grid, then suggest/review panels. */
+:root{
+  --bg:#f5f6fa; --surface:#ffffff; --ink:#1f2340; --muted:#5b6078; --line:#dfe2ec;
+  --band:#e9ebf8; --panel:#d9ddf3; --wood:#c98f5a; --wood-dark:#a8713f;
+  --accent:#3b3f9e; --accent-ink:#ffffff; --sun:#f2b632; --sun-soft:#fdf0cf; --sun-ink:#6b4a00;
+  --leaf:#e3f1ea; --leaf-ink:#1d5b3c; --chip:#eceef6; --photo:#ffffff; --danger:#b3261e; --shade:rgba(20,22,42,.45);
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#14162a; --surface:#1d2038; --ink:#eef0fb; --muted:#a6abc6; --line:#30345a;
+  --band:#1a1d36; --panel:#262a4c; --wood:#9c6a3c; --wood-dark:#7a502b;
+  --accent:#9ea4ff; --accent-ink:#14162a; --sun:#f2b632; --sun-soft:#3b3214; --sun-ink:#f7d47a;
+  --leaf:#183528; --leaf-ink:#9fdcbb; --chip:#272b4a; --photo:#f4f4f7; --danger:#ff8a80; --shade:rgba(0,0,0,.6); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#14162a; --surface:#1d2038; --ink:#eef0fb; --muted:#a6abc6; --line:#30345a;
+  --band:#1a1d36; --panel:#262a4c; --wood:#9c6a3c; --wood-dark:#7a502b;
+  --accent:#9ea4ff; --accent-ink:#14162a; --sun:#f2b632; --sun-soft:#3b3214; --sun-ink:#f7d47a;
+  --leaf:#183528; --leaf-ink:#9fdcbb; --chip:#272b4a; --photo:#f4f4f7; --danger:#ff8a80; --shade:rgba(0,0,0,.6); color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+
+/* Hero */
+.hero{background:var(--band)}
+.hero .wrap{padding-block:40px 44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:40px;align-items:center}
+.hero-text{display:grid;gap:16px;min-width:0}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.5rem,5.6vw,4.4rem);line-height:.98;margin:0;letter-spacing:-.025em;text-wrap:balance}
+h1 span{background:linear-gradient(transparent 60%, var(--sun) 60%, var(--sun) 90%, transparent 90%);padding-inline:2px}
+.lede{max-width:52ch;margin:0;font-size:1.12rem;color:var(--muted)}
+.lede strong{color:var(--ink)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.btn{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:10px;padding:11px 16px;font-weight:700;text-decoration:none;background:var(--accent);color:var(--accent-ink);font-size:15px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.small{padding:7px 12px;font-size:14px}
+.btn.danger{background:transparent;color:var(--danger);border:1.5px solid var(--line)}
+.btn:hover{filter:brightness(1.07)}
+.btn[disabled]{opacity:.55;cursor:default}
+.art{position:relative;margin:0;min-width:0}
+.art .frame{border-radius:22px;overflow:hidden;background:var(--panel);aspect-ratio:4/3;max-width:100%;box-shadow:0 18px 40px -24px var(--shade)}
+.art img,.art svg{display:block;width:100%;height:100%;object-fit:cover}
+.art figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.hero-admin{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
+.hero-admin input[type=text]{flex:1 1 200px;min-width:0;font:inherit;font-size:14px;padding:7px 10px;border:1.5px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+
+/* Steps */
+.steps .wrap{padding-block:26px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.step b{font-family:var(--display);font-size:1.6rem;line-height:1;color:var(--accent);font-weight:800;font-variant-numeric:tabular-nums}
+.step h2{font-size:1rem;margin:0 0 2px;font-family:var(--body)}
+.step p{margin:0;color:var(--muted);font-size:15px}
+
+/* Filter bar */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+.bar{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--bg);border-block:1px solid var(--line)}
+.bar .wrap{padding-block:14px;display:grid;gap:12px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.search{flex:1 1 260px;min-width:0;position:relative}
+.search input{width:100%;font:inherit;padding:11px 14px 11px 40px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--muted);fill:none}
+.toggle{display:flex;gap:8px;align-items:center;cursor:pointer;font-size:15px;padding:9px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);user-select:none}
+.toggle input{width:18px;height:18px;accent-color:var(--accent);margin:0}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font-size:15px;border:0;border-radius:999px;padding:7px 14px;background:var(--chip);color:var(--ink);display:flex;gap:6px;align-items:baseline}
+.chip .n{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.chip[aria-pressed="true"] .n{color:inherit;opacity:.8}
+
+/* Grid */
+main .wrap{padding-block:24px 40px}
+.listhead{display:grid;gap:8px;margin:0 0 18px}
+.count{color:var(--ink);margin:0;font-size:15px;font-weight:700}
+.legend{margin:0;color:var(--muted);font-size:14px;line-height:1.9}
+.legend .tag{font-size:12px;padding:2px 7px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0;overflow:hidden}
+.thumb{position:relative;margin:-18px -18px 4px;aspect-ratio:4/3;max-width:none;background:var(--photo);display:grid;place-items:center;border-bottom:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:contain;padding:10px;display:block}
+.thumb.ph{background:var(--band)}
+.thumb.ph svg{width:56px;height:56px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+.thumb .photo-btn{position:absolute;right:10px;bottom:10px}
+.thumb .credit{position:absolute;left:8px;bottom:8px;max-width:60%;font-size:11px;line-height:1.3;padding:2px 7px;border-radius:5px;background:var(--surface);color:var(--muted);opacity:.92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ph-row .src{font-size:13px;color:var(--muted)}
+.ph-row .src.warn{color:var(--sun-ink);background:var(--sun-soft);padding:1px 6px;border-radius:5px}
+.photos{border-color:var(--accent);border-width:2px}
+.meter{height:8px;border-radius:99px;background:var(--chip);overflow:hidden;max-width:420px}
+.meter span{display:block;height:100%;background:var(--accent);border-radius:99px}
+.drop{border:2px dashed var(--line);border-radius:12px;padding:18px;text-align:center;color:var(--muted)}
+.drop.over{border-color:var(--accent);background:var(--band)}
+.ph-list{display:grid;gap:8px;max-height:520px;overflow:auto;padding-right:4px}
+.ph-row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.ph-row .nm{flex:1 1 220px;min-width:0;overflow-wrap:anywhere}
+.ph-row code{font-size:13px;background:var(--chip);padding:2px 6px;border-radius:5px}
+.ph-row a{color:var(--accent);font-weight:700}
+.cat{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.card h3{font-family:var(--display);font-weight:500;font-size:1.25rem;line-height:1.2;margin:0;text-wrap:balance;overflow-wrap:anywhere}
+.maker{margin:0;color:var(--muted);font-size:15px;overflow-wrap:anywhere}
+.maker b{color:var(--ink);font-weight:700}
+.note{margin:0;font-size:15px;color:var(--ink);overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:13px;padding:3px 9px;border-radius:6px;background:var(--chip);color:var(--ink)}
+.tag.own{background:var(--leaf);color:var(--leaf-ink);font-weight:700}
+.tag.price{background:var(--sun-soft);color:var(--sun-ink);font-variant-numeric:tabular-nums;font-weight:700}
+.go{margin-top:auto;padding-top:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.go a{display:inline-flex;gap:6px;align-items:center;text-decoration:none;font-weight:700;color:var(--accent-ink);background:var(--accent);padding:9px 14px;border-radius:9px;font-size:15px}
+.go a.search-link{background:transparent;color:var(--accent);border:1.5px dashed var(--line)}
+.go a.alt{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.tag.ca{background:var(--panel);color:var(--ink);font-weight:700}
+.tag.pick{background:var(--sun);color:#1f2340;font-weight:700}
+.adm .btn.on{border-color:var(--sun);background:var(--sun-soft);color:var(--sun-ink)}
+.adm{flex-wrap:wrap}
+.go a:hover{filter:brightness(1.08)}
+.adm{display:flex;gap:6px;margin-left:auto}
+.empty{padding:40px 0;color:var(--muted)}
+.linkbtn{color:var(--accent);background:none;border:0;text-decoration:underline;padding:0}
+
+/* Suggest + review */
+.panel .wrap{padding-block:8px 40px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:14px}
+.box h2{font-family:var(--display);font-size:1.6rem;margin:0;font-weight:700;letter-spacing:-.01em}
+.box p{margin:0;color:var(--muted);max-width:62ch}
+.review{border-color:var(--sun);border-width:2px}
+.outside{display:grid;gap:10px;border-top:1px solid var(--line);padding-top:16px}
+.outside h3{margin:0;font-size:1.05rem}
+.em{user-select:all;overflow-wrap:anywhere}
+.sug-list{display:grid;gap:10px}
+.sug{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+.sug > div{min-width:0;flex:1 1 280px}
+.sug h3{margin:0 0 2px;font-size:1.05rem;overflow-wrap:anywhere}
+.sug p{font-size:14px;overflow-wrap:anywhere}
+.sug .acts{display:flex;gap:8px;flex:none}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--sun-soft);color:var(--sun-ink)}
+
+/* Dialog */
+dialog{border:0;border-radius:18px;padding:0;width:min(560px, calc(100vw - 32px));background:var(--surface);color:var(--ink);box-shadow:0 30px 60px -20px var(--shade)}
+dialog::backdrop{background:var(--shade)}
+dialog form{padding:22px;display:grid;gap:14px;max-height:85vh;overflow:auto}
+dialog h2{font-family:var(--display);margin:0;font-size:1.4rem}
+.field{display:grid;gap:4px}
+.field label{font-weight:700;font-size:14px}
+.field small{color:var(--muted);font-size:13px}
+.field input,.field select,.field textarea{font:inherit;font-size:15px;padding:9px 11px;border:1.5px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form-acts{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.err{color:var(--danger);font-size:14px;margin:0}
+
+/* Publish bar + toast */
+.pubbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--ink);color:var(--bg);padding-bottom:env(safe-area-inset-bottom, 0px)}
+.pubbar .wrap{padding-block:12px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.pubbar .btn{background:var(--sun);color:#1f2340}
+.pubbar .btn.ghost{background:transparent;color:var(--bg);border-color:var(--muted)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom, 0px));z-index:30;background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:15px;max-width:calc(100vw - 32px)}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:32px 96px;display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+footer h2{font-family:var(--display);font-size:1.1rem;margin:0 0 6px;font-weight:700}
+footer p{margin:0;color:var(--muted);max-width:60ch;font-size:15px}
+
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr;gap:28px;padding-block:28px 32px}
+  .steps .wrap{grid-template-columns:1fr;gap:14px}
+}
+@media (max-width:480px){.two{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+<div id="app"></div>
+<script id="ms-data" type="application/json">{"hero":null,"cfg":{},"items":[{"id":"f164","c":"figures","n":"MyFamilyBuilders 32-piece set","m":"MyFamilyBuilders","via":"Amazon","u":"https://www.amazon.com/dp/B01HP0UOYO","r":["Multiracial families","Mix and match","Ages 2–7"],"x":"Magnetic wooden heads, bodies and legs in different skin tones that kids snap together to build families that look like theirs.","src":"https://flyingpigtoys.com/cdn/shop/products/b575a777ad5c83e21d28c04f32a5d3146b3b1b62a7ebc575644e18d90c52d31a.jpg?v=1658877980","img":"f66a4c91073a6a769c9cbfaadeee909e.jpg","pc":"MyFamilyBuilders","fav":true},{"c":"figures","n":"Duplo World People set","m":"LEGO Duplo","r":["Many skin tones","Toddlers"],"id":"f31","x":"Duplo people of different ages and skin tones for toddler building. Retired set, so look for it secondhand.","src":"https://images.brickset.com/sets/images/45011-1.jpg","img":"792f3ba782e9d79248c5eb2e42f638bf.jpg","pc":"LEGO Duplo","fav":true},{"c":"dolls","n":"Superhero boy dolls","m":"Wonder Crew","r":["Boy doll","Many skin tones"],"u":"https://www.wondercrew.com/","id":"f17","src":"https://thetoyinsider.com/wp-content/uploads/2016/05/Wonder-Crew-Superhero.jpg","x":"Soft superhero boy dolls that encourage nurturing play for boys. The line no longer seems to be in production, but the dolls can still be found new from some sellers, like ToyWiz, and secondhand.","fav":true,"img":"bf00c387bc52fea5340f22952e03f7f2.jpg","pc":"Wonder Crew"},{"c":"dolls","n":"Harperiman dolls","m":"Harperiman","r":["Black"],"u":"https://www.harperiman.com/","x":"Handmade linen dolls of Black children. Also on Instagram @harperimandolls.","id":"f23","src":"https://assets.bigcartel.com/product_images/422962146/Zada26-2.png?auto=format&fit=max&h=1200&w=1200","fav":true,"img":"2aa9b41ca64a01f915e9fbd48cb957d9.jpg","pc":"Harperiman"},{"c":"dolls","n":"Playdate Friends soft dolls","via":"Maisonette","r":["Many skin tones","Asian","Black","Boy & girl dolls","Machine washable"],"u":"https://www.maisonette.com/products/playdate-friends","id":"f61","src":"https://www.manhattantoy.com/cdn/shop/products/Collection-Playdate-Friends_ea4dab72-e88a-4750-8e45-821f56e40372.jpg?v=1673030083","x":"14-inch soft, machine-washable dolls, each with a little animal friend. The line includes Nico, an Asian girl with a hen, Harper, a Black girl with a bear, and a Black boy doll.","img":"20c8523faefc888106bbbebc60e96c68.jpg","pc":"Manhattan Toy","fav":true,"m":"Manhattan Toy","ca":{"u":"https://www.snugglebugz.ca/products/manhattan-toys-playdate-friends","s":"Snuggle Bugz"}},{"id":"f154","c":"dolls","n":"Zoe and the Curlfriends dolls","m":"Healthy Roots Dolls","u":"https://healthyrootsdolls.com/collections/dolls/products/zoe","own":"black","loc":"USA","r":["Black","Natural curly hair","Hair play"],"x":"Dolls with soft, styleable natural curls that help kids learn to love and care for their own hair. Also Marisol and Gaïana.","src":"https://healthyrootsdolls.com/cdn/shop/files/task-Clean-PDP-hero-image-of-the_530x530@2x.png?v=1791498501","img":"112ab45185b7bb2f6ea5a54623b06aa5.jpg","pc":"Healthy Roots Dolls","fav":true},{"c":"dolls","n":"Creatable World dolls","m":"Mattel","r":["Customizable","Gender-inclusive"],"id":"f12","src":"https://i5.walmartimages.com/seo/Creatable-W-Orld-Deluxe-Character-Kit-Customizable-Doll-Black-Straight-Hair_266a861e-4cb3-4dc1-969b-8256d619e6ba.33ca9e952a471d2cc448308cb70d2971.jpeg","img":"99ad2b3bc9dad78a089abe992ca3ffba.jpg","pc":"Mattel","x":"Dolls with swappable wigs and outfits, so kids can make one that looks like them.","fav":true},{"id":"f163","c":"puzzles","n":"I Never Forget a Face memory game","m":"eeBoo","u":"https://eeboo.com/products/i-never-forget-a-face-square-matching","p":"$25 USD","r":["Many cultures","Memory game","Ages 3+"],"x":"A matching game with 24 children from cultures around the world. The box lists each child's home country.","ca":{"u":"https://flyingpigtoys.com/collections/eeboo/products/i-never-forget-a-face-matching-memory-game","s":"Flying Pig Toys"},"src":"https://eeboo.com/cdn/shop/files/MGFAC3_689196504242_1.jpg?v=1763151905","img":"75f97844513a77190e3fe08a3947a116.jpg","pc":"eeBoo","fav":true},{"c":"books","n":"This Is How We Play: A Celebration of Disability and Adaptation","m":"Jessica Slice & Caroline Cupp, illustrated by Kayla Harren","via":"Bookshop.org","u":"https://bookshop.org/p/books/this-is-how-we-play-a-celebration-of-disability-adaptation-jessica-slice/21055070","p":"$18 USD","r":["Disability","Picture book","Ages 3–7"],"x":"Families with a disabled member find creative, adapted ways to play together.","src":"https://images-us.bookshop.org/ingram/9780593529904.jpg?v=ffc8f2d71e8cad23b8b0f9e2e26993d8&width=600","id":"f134","img":"e9e6346d968fc150562bd34d8494a7ec.jpg","pc":"Jessica Slice & Caroline Cupp, illustrated by Kayla Harren","fav":true},{"c":"play","n":"Musician and artist reusable paper dolls","via":"Maisonette","r":["Many skin tones"],"u":"https://www.maisonette.com/product/musician-and-artist-paper-doll-reusable-set","id":"f60","src":"https://www.maisonette.com/cdn/shop/files/OLZ_fin3XuauQf9jrEk8rCZE8_6082aaec-93c3-4d36-aaec-9a1d89b686da.jpg?v=1777967020","x":"Reusable paper dolls of a musician and an artist in different skin tones.","img":"fc88ac54a104e190531b1e7e7cca9d1e.jpg","pc":"Maisonette","fav":true},{"id":"f167","c":"play","n":"My Hair, My Crown magnetic play set","m":"Mudpuppy, illustrated by Tabitha Brown","via":"Kindred Stories","u":"https://kindredstorieshtx.com/products/my-hair-my-crown-magnetic-play-set","p":"$18 USD","r":["Black","Natural hair","Magnetic","Ages 4+"],"x":"Mix-and-match magnets for styling hair on four Black kids, in a travel tin. Sells out often, so check back or look for it at museum and book shops.","src":"https://kindredstorieshtx.com/cdn/shop/files/9780735379169_38e07.jpg?v=1692124528","img":"ae87add866923dedb56c04ba41b10c88.webp","pc":"Mudpuppy, illustrated by Tabitha Brown","fav":true},{"c":"learn","n":"ABC Affirmations flash cards: Black Boy Joy","m":"Liberated Young","u":"https://liberatedyoung.com/product/abc-affirmations-flash-cards-black-boy-joy/","own":"black","loc":"Philadelphia, USA","p":"$25 USD","r":["Black","Flashcards","Affirmations","Ages 3–7"],"x":"26 alphabet cards, each with a Black boy and an affirming word.","src":"https://liberatedyoung.com/wp-content/uploads/2021/05/LY-Black-Boy-Joy-Main-1.png","id":"f92","img":"d0019eea64818d6a951235e1b17f98da.jpg","pc":"Liberated Young","fav":true},{"c":"books","n":"A Family Like Ours","m":"Frank Murphy & Alice Lee, illustrated by Kayla Harren","via":"Bookshop.org","u":"https://bookshop.org/p/books/a-family-like-ours-alice-lee/acd19b34d4315a51","p":"$18 USD","r":["All families","Adoption","Chosen family","Ages 4–8"],"x":"Celebrates extended, adoptive and chosen families and how they lift each other up.","src":"https://images-us.bookshop.org/ingram/9781534111868.jpg?v=5abe6fa2e7cd95309127058f2b6e305d&width=600","id":"f130","img":"8d26e05c38cb70429dd77209324ac3fe.jpg","pc":"Frank Murphy & Alice Lee, illustrated by Kayla Harren","fav":true},{"c":"books","n":"Families Can","m":"Dan Saks, illustrated by Brooke Smart","via":"Bookshop.org","u":"https://bookshop.org/p/books/families-can-dan-saks/15056630","p":"$8 USD","r":["All families","Board book","Ages 0–3"],"x":"A rhyming board book about how families differ in size and shape but share the same love.","src":"https://images-us.bookshop.org/ingram/9780593223659.jpg?v=8469bf69ac9c87e5622ce8d2954850e4&width=600","id":"f135","img":"c032612f8eed8502840b78aae65c9d16.jpg","pc":"Dan Saks, illustrated by Brooke Smart","fav":true},{"c":"dolls","n":"Sabrina the stuffed mermaid","m":"Lucy's Room","via":"Maisonette","r":["Brown skin","Plush"],"u":"https://www.maisonette.com/product/lucy-s-room-sabrina-the-stuffed-plush-mermaid-doll","id":"f28","src":"https://emersonandfriends.com/cdn/shop/files/mermaid_stuffed_girl_doll_toy.jpg?v=1762441259","img":"60fa8da21c40dcb7ac031b0e07fb37bf.jpg","pc":"Lucy's Room","x":"A soft plush mermaid doll with brown skin.","fav":true},{"c":"dolls","n":"Park Friends organic baby dolls","m":"Apple Park","r":["Many skin tones","For babies"],"u":"https://appleparkkids.com/products/park-friends-alex","id":"f9","own":"pogm","src":"https://appleparkkids.com/cdn/shop/products/tmf56.jpg?v=1653392097&width=2048","x":"Soft organic-cotton dolls in many skin tones","img":"d1e2df4cde29e64084c926e33f136c26.jpg","pc":"Apple Park","fav":true},{"c":"puzzles","n":"Lift-and-fit career puzzles","m":"Philly & Friends","loc":"UK","p":"$25–50","r":["Many skin tones","Careers"],"own":"pogm","x":"Wooden lift-and-match puzzles of people of colour in different careers, including a women-in-STEM set.","u":"https://phillyandfriends.com/en-ca/collections/lift-fit-puzzles","id":"f40","src":"https://phillyandfriends.com/cdn/shop/files/38_4a1382b2-ce26-4526-9c42-37c7acfbbeca_800x.png?v=1715196842","img":"5f926b800a69bc36c3580cd8209cb8fe.webp","pc":"Philly & Friends","fav":true},{"c":"puzzles","n":"Career Kids STEM puzzle pack","m":"Kids for Culture","via":"Black Toy Store","r":["Black","Careers"],"u":"https://blacktoystore.com/product/kids-for-culture-career-kids-stem-edition-puzzle-10-puzzle-pack-40-pieces-interchangeable-heads-and-body-stem-education-ages-2-6/","id":"f42","src":"https://www.destinationbabykids.com/cdn/shop/files/195893528394.png?v=1687818110","x":"Ten mix-and-match career puzzles with Black kids as scientists, doctors and engineers.","img":"eafb8e3118b402c6855982881dd6c540.webp","pc":"Kids for Culture","fav":true},{"c":"figures","n":"Little Friends Erik","m":"HABA","u":"https://habausa.com/products/bendy-doll-erik","p":"$10 USD","r":["Black","Boy doll","Dollhouse size"],"x":"A 3.75-inch bendy dollhouse boy with dark curly hair who dreams of being a superhero. His sister Naomi is sold separately.","ca":{"u":"https://flyingpigtoys.com/en-ca/collections/haba/products/little-friends-erik-doll","s":"Flying Pig Toys"},"src":"https://www.habausa.com/cdn/shop/products/haba-little-friend-people-little-friends-erik-african-american-boy-doll-28750725677154.jpg?v=1698427018","id":"f158","img":"a2e41615f6fabee00f2b680f28e09a67.jpg","pc":"HABA","fav":true},{"c":"figures","n":"LEGO Education People set (45030)","m":"LEGO","r":["Many skin tones","Wheelchair user"],"u":"https://www.lego.com/en-ca/product/people-45030","id":"f36","x":"LEGO Education figures in many skin tones, including a wheelchair user. Retired set, so look for it secondhand.","src":"https://images.brickset.com/sets/images/45030-1.jpg","img":"71db48588e2adf062a6e982b166f3964.jpg","pc":"LEGO","fav":true},{"c":"figures","n":"Little Friends Best Friends set (Lara, Mali, Liam, Naomi, Matze)","m":"HABA","via":"Gimme the Good Stuff","u":"https://gimmethegoodstuff.org/products/little-friends-doll-bundle-best-friends-set","p":"$45 USD","r":["Many skin tones","Dollhouse size","Set of 5"],"x":"Five bendy dollhouse kids, including Lara with black pigtails, in a range of skin tones.","src":"https://gimmethegoodstuff.org/cdn/shop/files/little-friends-doll-bundle-990001-1.jpg?v=1789564646","id":"f160","img":"6f18d23fc72069f1c3216d1f927867e2.jpg","pc":"HABA","fav":true},{"c":"figures","n":"Little People figures","m":"Fisher-Price","r":["Many skin tones","Toddlers"],"id":"f30","img":"8dcabd87e4a73f7905c06c4c46340a1f.jpg","pc":"Fisher-Price","x":"Chunky toddler figures in a range of skin tones, sized for little hands.","fav":true},{"c":"figures","n":"Wooden people figures","m":"Tender Leaf Toys","r":["Many skin tones"],"id":"f37","img":"8500a62d5cd45e1eb489d114b674dfbd.jpg","pc":"Tender Leaf Toys","x":"Wooden dollhouse family figures with bendable arms and legs.","fav":true},{"c":"figures","n":"Create-your-own minifigure","m":"MiniFigs.me","r":["Customizable"],"u":"https://minifigs.me/pages/create-your-own","id":"f32","x":"Design a LEGO-compatible minifigure that looks like your child.","fav":true,"img":"50ef426be6aee56cbdf30b3adb476e1e.jpg","pc":"MiniFigs.me"},{"c":"play","n":"Wooden dim sum play set","m":"Bitty Bao","r":["Chinese","Play food"],"u":"https://bittybao.com/products/wooden-dim-sum-toy-set","id":"f57","own":"pogm","src":"https://www.bittybao.com/cdn/shop/files/2.DimSumToyJYN03594.png?v=1763106535","x":"A wooden dim sum set with steamer baskets for the play kitchen.","img":"26fcf4535cda877360268ae0bce5dbf2.jpg","pc":"Bitty Bao","fav":true},{"n":"What White Parents Should Know about Transracial Adoption","m":"Melissa Guida-Richards","via":"Bookshop.org","u":"https://bookshop.org/p/books/what-white-parents-should-know-about-transracial-adoption-an-adoptee-s-perspective-on-its-history-nuances-and-practices-melissa-guida-richards/15998085","p":"$18 USD","r":["Adoptee voice","Practical guide"],"x":"A transracial adoptee's guide for white adoptive parents on privilege, microaggressions and supporting a child's cultural identity.","src":"https://images-us.bookshop.org/ingram/9781623175825.jpg?v=enc-v1&width=600","id":"f144","c":"grown","fav":true,"img":"b495eae449957c3d1cb2cbff555e7623.jpg","pc":"Melissa Guida-Richards"},{"n":"The Connected Child","m":"Karyn B. Purvis, David R. Cross & Wendy Lyons Sunshine","via":"Bookshop.org","u":"https://bookshop.org/p/books/the-connected-child-bring-hope-and-healing-to-your-adoptive-family-david-r-cross/ee15eba8082c6915","p":"$21 USD","r":["Attachment","Practical guide"],"x":"A widely used guide to building trust and attachment with children who've experienced early loss.","src":"https://images-us.bookshop.org/ingram/9780071475006.jpg?v=8bb690117ff7aa4ec36b2f89edb7419a&width=600","id":"f152","c":"grown","fav":true,"img":"224affdea7b31830ca5a47177cedd11e.jpg","pc":"Karyn B. Purvis, David R. Cross & Wendy Lyons Sunshine"},{"c":"dolls","n":"Creatable World kit DC-725 (black braided hair)","m":"Mattel","via":"ToyWiz","u":"https://toywiz.com/creatable-world-black-braided-hair-deluxe-character-kit-dc-725/","p":"$35 USD","r":["Black","Braids","Customizable"],"x":"A customizable doll with black braids, 6 clothing pieces, 3 pairs of shoes and 2 accessories. Often out of stock, so check secondhand too.","src":"https://cdn11.bigcommerce.com/s-0kvv9/products/314023/images/449046/cwdc725__42568.1712906408.500.750.jpg?c=2","id":"f162","fav":true,"img":"87368b08e6d0b53c596f3a06d4a28ce6.jpg","pc":"Mattel"},{"id":"f182","c":"dolls","n":"Herstory dolls","m":"Herstory Doll","own":"black","loc":"Hamilton, Canada","r":["Black","Natural hair","Canadian","18-inch"],"x":"Posable 18-inch dolls reflecting the diversity of girls of African descent, created by Black Canadian designer Queen Cee. Sold through her Hamilton-based Etsy shop.","src":"https://i.etsystatic.com/55365335/r/il/847d4e/7162713571/il_1080xN.7162713571_7mhm.jpg","fav":true,"u":"https://www.etsy.com/listing/1832441467/herstory-black-doll-18-inch-articulated","via":"Etsy (ISeeYourBeauty2)","p":"CAD $150","img":"20fa9601c9e6c925a00195791861af1b.jpg","pc":"Herstory Doll"},{"c":"play","n":"I Can Be… a Veterinarian! magnetic play set","m":"Mudpuppy","via":"Treehouse Toys","u":"https://treehousetoys.us/products/magnetic-i-can-be-a-veterinarian","p":"$18 USD","r":["Careers","Magnetic","Ages 4+"],"x":"A travel tin of magnets for dressing the vet and acting out a busy day at the animal clinic.","src":"https://treehousetoys.us/cdn/shop/products/i-can-be-a-veterinarian-magnetic-play-set-carly-gledhill-148437.webp?crop=center&height=1200&v=1663182311&width=1200","id":"f168","img":"037532dec96eda1940e0d5015e5b9248.jpg","pc":"Mudpuppy","fav":true},{"c":"play","n":"I Can Be… a Scientist! magnetic play set","m":"Mudpuppy","r":["STEM","Careers","Magnetic","Ages 4+"],"x":"A travel tin with 50+ magnets for dressing up astronomers, chemists and palaeontologists, plus two lab scenes.","id":"f169","img":"b0488e5236e386d4fbbc758811dfd17c.jpg","pc":"Mudpuppy","fav":true},{"c":"learn","n":"Crayola Colors of the World washable paint","m":"Crayola","via":"School Specialty","u":"https://www.schoolspecialty.com/crayola-colors-of-the-world-washable-paint-assorted-skin-tone-colors-8-ounces-set-of-9-2102431","p":"$31–42 USD","r":["Skin tones","Paint","Washable","Ages 3+"],"x":"Nine 8-ounce bottles of washable paint in skin-tone shades for realistic portraits. Also comes as a smaller 10-bottle set.","src":"https://cdn.schoolspecialty.com/07c5b9d5-37eb-4c6f-928c-b0f100a29724/2102431_B_JPG%20Output.jpg?width=700&height=700&fit=bounds&canvas=700,700&bg-color=ffffff","id":"f196","img":"813bec566917702a84e976d7f6699a3a.webp","pc":"Crayola","fav":true},{"c":"care","n":"Heal in Colour bandages (Honey, Almond, Chestnut)","m":"Heal in Colour","u":"https://www.healincolour.ca/collections/all","own":"black","loc":"Toronto, Canada","p":"CAD $8.99 / 30","r":["Skin-tone bandages","Latex-free"],"x":"Bandages that match Black and brown skin, in three shades. Buy an assorted box or a single shade. Founded by Torontonian Tianna McFarlane.","src":"https://www.healincolour.ca/cdn/shop/products/origbox.png?v=1666968842","id":"f189","img":"0521ceb59a5161734c38d1e938986e03.jpg","pc":"Heal in Colour","fav":true},{"n":"Raising Antiracist Children: A Practical Parenting Guide","m":"Britt Hawthorne with Natasha Yglesias","via":"Bookshop.org","u":"https://bookshop.org/p/books/raising-antiracist-children-a-practical-parenting-guide-britt-hawthorne/17648039","p":"$19 USD","r":["Antiracism","Practical guide"],"x":"A Black educator's step-by-step guide to talking about race and justice with kids.","src":"https://images-us.bookshop.org/ingram/9781982185428.jpg?v=fdaca6fdce8acb3307395145292245b6&width=600","id":"f150","c":"grown","img":"035f02c37460d3ea2471beff1955dd8b.jpg","pc":"Britt Hawthorne with Natasha Yglesias","fav":true},{"c":"figures","n":"Buildable People with Big Emotions (10423)","m":"LEGO","r":["Many skin tones","Feelings"],"u":"https://www.lego.com/en-ca/product/buildable-people-with-big-emotions-10423","id":"f35","src":"https://www.lego.com/cdn/cs/set/assets/blt5f4cd5a2eb451988/10423_alt1.png?fit=bounds&format=jpg&quality=80&width=1500&height=1500&dpr=1","img":"bd043aef0eefe98c5d3550466868930b.jpg","pc":"LEGO","x":"Buildable LEGO people with swappable faces for talking about feelings."},{"c":"figures","n":"LEGO Friends minifigures","m":"LEGO","via":"Choose a Brick","r":["Many skin tones"],"u":"https://www.choose-a-brick.com/minifigures/friends-minifigures/","id":"f33","src":"https://img.bricklink.com/ItemImage/MN/0/frnd0633.png","img":"3344e5f771d3068011e7c282986d5129.jpg","pc":"LEGO","x":"LEGO Friends minifigures in many skin tones, sold individually."},{"c":"figures","n":"Wooden magnetic figures","m":"Vebo","r":["Many skin tones"],"id":"f34","src":"https://i5.walmartimages.com/seo/VEBO-22pc-Wooden-Magnetic-Figures-Set-8-16-Double-Sided-Characters-Mix-Match-Family-Set-Compatible-Magnetic-Tiles-Sets-Educational-STEM-Building-Toy_0c60da8f-7060-4993-aa93-2d614962cda8.485a8b1773ad91c6b0a6adc6fe739e88.jpeg","img":"6f3e1e20bd508c2312ecaf9cb6dd8185.jpg","pc":"Vebo","x":"Double-sided wooden figures in many skin tones that stick to magnetic tiles."},{"c":"figures","n":"Playmobil families and figures","m":"Playmobil","r":["Many skin tones"],"id":"f38","img":"8235b26e04298b5a91a65cdfb9062bd8.jpg","pc":"Playmobil","x":"Playmobil families and characters in different skin tones."},{"c":"figures","n":"Sun-Man action figure","r":["Black","Superhero"],"id":"f39","img":"4a2d691b9944f22b1c8e69491a9e650e.jpg","pc":"","x":"A 1980s Black superhero action figure, now a secondhand collector's find."},{"c":"figures","n":"Wooden peg people in many skin tones (set of 10)","m":"Cosy","via":"Scholar's Choice","u":"https://www.scholarschoice.ca/toys/ethnic-wooden-people.html","loc":"Canada","p":"CAD $63–70","r":["Many skin tones","Wooden","Ages 3+"],"x":"Simple peg people kids can use to act out their own family.","id":"f120","img":"cfc79222f97ba64b3d63ad8692899e6a.webp","pc":"Cosy"},{"c":"figures","n":"Little Friends Naomi","m":"HABA","via":"Flying Pig Toys","u":"https://flyingpigtoys.com/en-ca/collections/haba/products/little-friends-naomi-doll","loc":"Canada","p":"CAD $18","r":["Black","Dollhouse size","Space buns"],"x":"A 3.75-inch bendy dollhouse girl with space buns who loves dance parties, science and art. Erik's sister.","ca":{"u":"https://flyingpigtoys.com/en-ca/collections/haba/products/little-friends-naomi-doll","s":"Flying Pig Toys"},"src":"https://flyingpigtoys.com/cdn/shop/files/haba-little-friend-people-little-friends-naomi-african-american-girl-doll-28750726266978_1080x_e8ecec26-e176-4662-8d54-94999e5f0a8b.jpg?v=1696709470","id":"f159","img":"779dd8786ec8b9642e08cbb8b456a50f.jpg","pc":"HABA"},{"c":"figures","n":"Village wooden play set","m":"Gosling Square","via":"Eastern Toybox","r":["Fair trade"],"u":"https://easterntoybox.ca/collections/toys-fairtrade/products/village-wooden-set-gosling-square","id":"f59","own":"pogm","loc":"Canada","x":"A fair-trade wooden village play set.","img":"15b98e14df9695293e216077f505ad35.jpg","pc":"Gosling Square"},{"c":"figures","n":"Magnetic diversity dress-up set","m":"Discovery Toys","r":["Many cultures"],"id":"f56","x":"A magnetic dress-up set with outfits from different cultures.","img":"2cb620e92900d88944d418d3b0de123d.jpg","pc":"Discovery Toys"},{"id":"f155","c":"dolls","n":"Littlelistas dolls: Lena and Lily","m":"Purpose Toys","own":"black","loc":"USA","p":"$25 USD","r":["Black","Natural hair","Ages 3+"],"x":"Small dolls with natural curls (3C curls to 4A coils) and a gold crown to wear with pride, from a Black woman-owned toy company. Launched in 2023 at Target, CVS and others, so they may take some searching now.","src":"https://thetoyinsider.com/wp-content/uploads/2023/07/PurposeToys_Littlelista.jpg","img":"478c8d4ee7f3f732915cc3f0dd64af32.jpg","pc":"Purpose Toys"},{"c":"dolls","n":"Ada Twist, Scientist lab doll","m":"Just Play","via":"Black Toy Store","p":"$25–50","r":["Black"],"own":"pogm","u":"https://blacktoystore.com/product/ada-twist-scientist-ada-twist-lab-doll-12-5-inch-interactive-doll-with-research-lab-accessories-talks-and-sings-the-the-brainstorm-song-kids-toys-for-ages-3-up-by-just-play/","id":"f2","src":"https://m.media-amazon.com/images/I/81zZgLg4y4L._AC_SL3840_.jpg","img":"ae4ac337cab18df5967063384763a486.jpg","pc":"Just Play","x":"A talking doll of Ada Twist, the young Black scientist from the books and Netflix show, with a lab kit."},{"c":"dolls","n":"Karma's World Winston doll","m":"Mattel","via":"Black Toy Store","p":"$0–25","r":["Black","Boy doll"],"u":"https://blacktoystore.com/product/mattel-karmas-world-winston-torres-doll-with-camcorder-accessory-brown-hair-brown-eyes/","id":"f7","src":"https://cdn11.bigcommerce.com/s-0kvv9/products/403622/images/621589/194735064281__10281.1657734414.500.750.jpg?c=2","img":"6418006cb7ab0f9d1a28531117be1951.jpg","pc":"Mattel","x":"Winston from Netflix's Karma's World, a Black boy doll with a camcorder accessory."},{"c":"dolls","n":"Super Sema talking and singing doll","m":"Just Play","via":"Black Toy Store","p":"$0–25","r":["Black","African superhero"],"u":"https://blacktoystore.com/product/super-sema-12-inch-talking-and-singing-doll-and-accessories-kids-toys-for-ages-3-up-by-just-play/","id":"f8","x":"A talking, singing doll of Super Sema, the young African superhero from the YouTube series.","img":"36b9bef7a1df592ecc2dac99cf40c946.jpg","pc":"Just Play"},{"c":"dolls","n":"Bella doll with stylable hair","m":"Beautiful Curly Me","r":["Black","Natural hair"],"id":"f10","x":"A Black doll with soft natural hair kids can comb and style.","img":"b5b4dcb8c2435c0a2048207cb678c186.jpg","pc":"Beautiful Curly Me"},{"c":"dolls","n":"Binta doll","m":"Beautiful Curly Me","r":["Black","Natural hair"],"id":"f11","x":"A Black doll with natural hair from the Beautiful Curly Me line.","img":"7ebfa9474c2c62c0fd623671cc0543eb.jpg","pc":"Beautiful Curly Me"},{"c":"dolls","n":"World Girls dolls","m":"World Girls","r":["Many cultures"],"u":"https://www.teamworldgirls.com/collections/all","id":"f13","src":"https://teamworldgirls.com/cdn/shop/products/3045_WorldDolls_030819-598_1024x1024.jpg?v=1555603470","x":"Dolls inspired by girls from different countries and cultures.","img":"76900fe194b5105a1b590ab308ccc9ac.jpg","pc":"World Girls"},{"c":"dolls","n":"Lottie dolls","m":"Lottie","r":["Many skin tones"],"u":"https://www.lottie.com/collections/dolls/","id":"f14","src":"https://cdn.shopify.com/s/files/1/0591/9493/files/LT181.png?v=1783436600","x":"Dolls in many skin tones with realistic, kid-like proportions.","img":"fbf261e0780f308f0c53cc35859ef666.jpg","pc":"Lottie"},{"c":"dolls","n":"Truly Me dolls, including boy dolls","m":"American Girl","r":["Many skin tones","Boy doll"],"u":"https://www.americangirl.com/products/truly-me-doll-75-gph55","id":"f15","src":"https://www.americangirl.com/cdn/shop/collections/122024-shop-app-card-4-tm-dolls-sets.jpg?v=1760553407","img":"20356665b03d1147fa41dc2a3004e3a5.jpg","pc":"American Girl","x":"18-inch dolls you choose by skin tone, hair and eyes, including boy dolls."},{"c":"dolls","n":"Kavi's Bollywood dance costume (18\" doll)","m":"American Girl","r":["South Asian"],"u":"https://www.americangirl.com/products/kavis-bollywood-dance-costume-for-18-inch-dolls-hmc15","id":"f16","src":"https://toybook.com/wp-content/uploads/sites/4/2023/01/AmericanGirl_Kavis-Bollywood-Dance-Costume-Set-Shot-796x1024.jpg","x":"A Bollywood dance outfit for 18-inch dolls, from American Girl's Kavi collection.","img":"314b12c2586a83f780e22a914cad9d03.jpg","pc":"American Girl"},{"c":"dolls","n":"South Asian dolls","m":"Every Girl Dolls","r":["South Asian"],"u":"https://everygirldolls.com/","id":"f19","x":"Dolls celebrating South Asian girls and culture.","img":"536cb17628a135e9dbc48aabd212fec7.jpg","pc":"Every Girl Dolls"},{"c":"dolls","n":"South Asian dolls","m":"Joey Dolls","r":["South Asian"],"u":"https://joeydolls.com/","id":"f20","src":"https://joeydolls.com/cdn/shop/files/Joeydolls-Indian-Priya-Doll.jpg?v=1776109086&width=533","own":"pogm","loc":"Toronto, Canada","img":"b0a7431b04ea10730637b5b804a814fb.webp","pc":"Joey Dolls","x":"Cultural dolls from an Asian-owned Toronto maker, including Priya, an Indian doll."},{"c":"dolls","n":"Littles Baby Alive Carry 'n Go","m":"Hasbro","r":["Baby doll"],"id":"f21","src":"https://colorlandtoys.com/cdn/shop/files/hasbro-littles-by-baby-alive-carry-n-go-squad-little-iris-e6646-7774118.jpg?v=1764098533","img":"988fb2b9f1316dee840da86fc527808a.jpg","pc":"Hasbro","x":"Small baby dolls with a carrier and accessories, sized for little hands."},{"c":"dolls","n":"African baby boy doll","m":"Little Wonder & Co","r":["Black","Boy doll"],"u":"https://littlewonderandco.com/products/baby-boy-doll-african","id":"f22","src":"https://littlewonderandco.com/cdn/shop/products/Africanbaby_5e0df1b4-e485-414c-8b97-b31b4ba15d9f.jpg?v=1742563429&width=714","img":"d824746c1143ec946ce946b5585c183d.jpg","pc":"Little Wonder & Co","x":"A soft African baby boy doll."},{"c":"dolls","n":"Fresh Dolls","m":"Fresh Dolls (Dr. Lisa Williams)","r":["Black"],"own":"black","u":"https://freshdolls.com/","id":"f24","x":"Black fashion dolls from Dr. Lisa Williams's Black-owned company, World of EPI.","img":"fc14b2d6e54180c19ddbd9f4684e5039.jpg","pc":"Fresh Dolls (Dr. Lisa Williams)"},{"c":"dolls","n":"Aisha English–Arabic speaking doll","m":"Hadiyang","r":["Arabic-speaking","Bilingual"],"u":"https://www.hadiyang.com/products/aisha-english-arabic-speaking-doll-new","id":"f25","src":"https://www.hadiyasouq.africa/cdn/shop/products/AishaEnglish_ArabicSpeakingDoll_1200x1143.png?v=1649955755","img":"0439c63a8a17a56a89e85d6e2fbe9217.jpg","pc":"Hadiyang","x":"A talking doll who speaks in both English and Arabic."},{"c":"dolls","n":"Little Tikes Sing-Along Ami","m":"Little Tikes","via":"Hadiyang","r":["Muslim families"],"u":"https://www.hadiyang.com/products/little-tikes-sing-along-ami","id":"f26","src":"https://www.hadiyasouq.africa/cdn/shop/products/LITTLETIKESSINGALONGAMIDOLL_1200x1506.png?v=1643360573","img":"e40e60a6d809050d2768517a611dde55.jpg","pc":"Little Tikes","x":"A Little Tikes doll who sings along with your child."},{"c":"dolls","n":"Kenaro afro doll","m":"Mayni Doll","via":"Afrikrea","r":["Black","Afro hair"],"u":"https://www.afrikrea.com/en/article/16-inch-45-cm-african-american-doll-poupee-africaine-mayni-doll-dolls-brown-plastic/N6944I3","id":"f27","x":"A 16-inch Black doll with a big afro, sold through the African marketplace Afrikrea.","img":"f2d10ef63d6b0c2b7269d201dc4a50d1.jpg","pc":"Mayni Doll"},{"c":"dolls","n":"Ada Angel doll","r":["Black"],"id":"f29","x":"A Black doll from the original list. Shop link still to come.","img":"6f491ef8c4ea7a9abc2f65b7b4322649.webp","pc":""},{"id":"f156","c":"dolls","n":"Doc McStuffins Pet Rescue doll","m":"Disney Junior (Just Play)","via":"A Mighty Girl","u":"https://www.amightygirl.com/doc-mcstuffins-pet-clinic-doll","loc":"USA","r":["Black","Doctor","Ages 3–6"],"x":"An 8.5-inch Doc McStuffins in her Pet Rescue outfit, with a lab coat, stethoscope and play doctor tools.","img":"ad1adc889eb98d5ebedb69763489a9b7.jpg","pc":"Disney Junior (Just Play)"},{"c":"dolls","n":"Naturalistas Fade Collection: Greg","m":"Purpose Toys","own":"black","loc":"USA","r":["Black","Boy doll","Fade haircut"],"x":"An 11.5-inch doll with a classic line-up and fade, celebrating Black barber culture. From a Black woman-owned company; Walmart has carried Naturalistas.","src":"https://www.giftsanddec.com/wp-content/uploads/sites/12/2023/09/Greg-Purpose-Toys-Fade-Collection-875x486.png","id":"f157","img":"049ec79e7286da582edf3b249c180f28.jpg","pc":"Purpose Toys"},{"id":"f183","c":"dolls","n":"Positively Perfect dolls","m":"Dr. Lisa Williams (World of EPI)","own":"black","loc":"USA","r":["Black","Baby & play dolls"],"x":"Dolls created by former professor Dr. Lisa Williams to build Black girls' self-esteem. Sister line to Fresh Dolls; has been sold at Walmart.","img":"44df2bd3b0db659fce7fa76ace3e6deb.jpg","pc":"Dr. Lisa Williams (World of EPI)"},{"id":"f184","c":"dolls","n":"Sibahle premium dolls (Ayana, Bontle, Zuri, Ndanaka)","m":"Sibahle Collection","u":"https://sibahlecollection.com/collections/premium-dolls","loc":"UK","p":"£50–60","r":["Black","Afro hair","African print"],"x":"Vanilla-scented Black dolls with afro hair and African-print dresses, founded in 2016 by Caroline Hlahla and Khulile Vilakazi-Ofosu. Ships internationally, including to Canada.","src":"https://sibahlecollection.com/cdn/shop/files/Photo_06-03-2018_07_39_50_f9bc0349-8ff9-4c41-aa21-ad45e916fcc7.jpg?height=628&pad_color=ffffff&v=1668896496&width=1200","img":"3bb2841a4a6704b6dc379c3d240194fc.jpg","pc":"Sibahle Collection"},{"id":"f185","c":"dolls","n":"Biracial doll gift sets","m":"Children of Love Dolls","u":"https://childrenoflovedolls.com/collections/bi-racial-doll-gift-sets","loc":"USA","p":"$60 USD","r":["Mixed-race","Biracial","Doll + book"],"x":"Dolls of mixed-race kids (Black/White, Black/Asian, Native American/Mexican), each with a book and an extra outfit. Some say positive affirmations.","src":"https://childrenoflovedolls.com/cdn/shop/collections/children_of_love_biracial_mixed_race_dolls_7.jpg?v=1684969696","img":"91f73cb3574a7b2cab66e2bd287b9b01.jpg","pc":"Children of Love Dolls"},{"c":"dolls","n":"The Jilly Doll","m":"Jilly Bǐng","u":"https://jillybing.com/products/the-jilly-doll","own":"pogm","loc":"San Francisco, USA","p":"$68 USD","r":["Asian American","14-inch vinyl","Ages 3+"],"x":"A 14-inch Asian American doll who loves food and adventure. Her chef's hat flips into L'il Tart, a plush egg-tart friend. Made by a team of Asian American parents.","src":"https://jillybing.com/cdn/shop/files/Jilly_Doll_with_accessories_bandana_and_reversible_hat.jpg?v=1783572110","id":"f186","img":"1279a1f87eda71f8c559e524f3bb8a4f.jpg","pc":"Jilly Bǐng"},{"c":"dolls","n":"The Riley Doll","m":"Jilly Bǐng","u":"https://jillybing.com/products/riley-doll","own":"pogm","loc":"San Francisco, USA","p":"$68 USD","r":["Mixed Asian & white","14-inch vinyl","Ages 3+"],"x":"An adventurous 14-inch girl of Asian and Caucasian descent, with a bucket hat that turns into a shaved-ice plush friend.","src":"https://jillybing.com/cdn/shop/files/Riley_Main_PDP.jpg?v=1764190679","id":"f187","img":"6e0c6bfbce9c4c5704f4574725494b02.jpg","pc":"Jilly Bǐng"},{"c":"dolls","n":"Miniland 15-inch Asian baby dolls (girl with glasses, girl, boy)","m":"Miniland Educational","via":"Scholar's Choice","u":"https://www.scholarschoice.ca/baby-doll-asian-girl-with-glasses-15in.html","loc":"Canada","p":"CAD $54–60","r":["Asian","Baby doll","Vinyl","Ages 3–6"],"x":"Realistic, lightly vanilla-scented vinyl baby dolls made in Spain, with fully moving heads, arms and legs. Also sold at Staples.ca.","id":"f188","img":"1d5ea6dd8af10fc05dcdf1ba7e5858a6.jpg","pc":"Miniland Educational"},{"c":"dolls","n":"Dozy Dinkum Fairy Ada","m":"Olli Ella (Dinkum Dolls)","via":"Simply Green Baby","u":"https://simplygreenbaby.com/products/olli-ella-dozy-dinkum-fairy","loc":"Canada","p":"CAD $46–58","r":["Brown skin","Soft doll","Baby's first doll","Ages 0+"],"x":"A soft, floppy 12.6-inch fairy doll with brown skin, a pearly velvet onesie and shimmery wings. She's made for cuddles and naps, and is gentle enough for babies. Often sells out, so check other Olli Ella stockists too.","src":"https://simplygreenbaby.com/cdn/shop/files/olliella-dozy-dinkum-fairy-ada-pearl-2.jpg?v=1757105787","id":"f191","img":"6d83f69c2e253c540f6abb1a0812167f.jpg","pc":"Olli Ella (Dinkum Dolls)"},{"c":"dolls","n":"Ashton astronaut lovey","m":"Little Muffincakes","u":"https://littlemuffincakes.com/products/ashton-lovey","own":"black","loc":"USA","p":"$20 USD","r":["Black","Baby","Lovey"],"x":"A soft space-themed comfort blanket from a brand making baby products that look like Black and Brown kids.","src":"https://cdn.shopify.com/s/files/1/1664/0709/files/059A9C9A-C429-4EF8-98F2-FDE6B6F20A62.jpg?v=1788566084","id":"f125","img":"32bf9992676dcc0ef4ddba178c8632b2.jpg","pc":"Little Muffincakes"},{"c":"dolls","n":"Barbie Chelsea doll and accessories","m":"Barbie","via":"Black Toy Store","p":"$0–25","r":["Black","Curly hair"],"own":"pogm","u":"https://blacktoystore.com/product/barbie-chelsea-doll-curly-brunette-hair-wearing-butterfly-print-dress-and-pink-shoes-toy-for-kids-ages-3-years-old-up/","id":"f3","x":"A small Chelsea doll with curly hair and accessories.","img":"fe7c7b7f2001599288d688ce5c1206da.jpg","pc":"Barbie"},{"c":"dolls","n":"Barbie Fashionistas #189, curvy with braids","m":"Barbie","via":"Black Toy Store","p":"$0–25","r":["Black","Braids","Curvy body"],"u":"https://blacktoystore.com/product/barbie-fashionistas-doll-189-with-curvy-body-crimson-braids-sleeveless-love-dress-hoop-earring-accessory/","id":"f4","src":"https://i.ebayimg.com/images/g/XYkAAOSwfNhilsLz/s-l400.jpg","x":"A curvy Barbie with long braids.","img":"385321f8b0716f6306db620aced591ec.webp","pc":"Barbie"},{"c":"dolls","n":"Barbie Fashionistas Ken with twists","m":"Barbie","via":"Black Toy Store","p":"$0–25","r":["Black","Boy doll","Twists"],"u":"https://blacktoystore.com/product/barbie-fashionistas-ken-fashion-doll-203-twisted-black-hair-sporty-orange-jersey-shorts-sneakers/","id":"f5","src":"https://i.ebayimg.com/images/g/~PUAAeSwBnVoFWgG/s-l400.jpg","img":"9b8e997c595582e046b371062968e753.jpg","pc":"Barbie","x":"Ken with twisted hair in a sporty outfit."},{"c":"dolls","n":"Barbie Fashionistas Ken with curly hair","m":"Barbie","via":"Black Toy Store","p":"$0–25","r":["Black","Boy doll","Curly hair"],"u":"https://blacktoystore.com/product/barbie-ken-fashionistas-doll-broad-black-curly-hair-multi-colored-camo-print-shirt-neon-green-shorts-silvery-sneakers-toy-for-kids-3-to-8-years-old/","id":"f6","src":"https://i5.walmartimages.com/seo/Barbie-Ken-Fashionistas-Doll-123-Broad-with-Black-Curly-Hair-in-Multi-Colored-Shirt-Shorts_3eb83da9-642d-48ec-9108-4cd9985072ac.f4cb5110ec75fde5479d15151900832b.jpeg","img":"301093811e125a0891f6e5604aee627d.jpg","pc":"Barbie","x":"Ken with a broader build and black curly hair."},{"c":"puzzles","n":"Career wooden jigsaw puzzle","m":"Philly & Friends","loc":"UK","p":"$25–50","r":["Many skin tones","Careers"],"own":"pogm","u":"https://phillyandfriends.com/en-ca/products/career-wooden-jigsaw-puzzle","id":"f41","src":"https://phillyandfriends.com/cdn/shop/products/Astro_Artist_800x.png?v=1701305139","x":"A wooden career jigsaw with kids of colour as astronauts, artists and more.","img":"87b2466cff3b3d75683e7e7742139bdb.jpg","pc":"Philly & Friends"},{"c":"puzzles","n":"Multicultural Friends puzzles, set of 6","m":"Kaplan Early Learning","via":"Walmart","r":["Many cultures"],"u":"https://www.walmart.com/ip/Multicultural-Friends-Puzzles-Set-of-6/151166528","id":"f43","src":"https://i5.walmartimages.com/seo/Kaplan-Early-Learning-Friends-Puzzles_2ee77980-91d9-475c-9805-3d5e41158720_1.4c075e5490a8760f624f676e57817f9e.jpeg","x":"Six preschool puzzles of children from different cultures."},{"c":"puzzles","n":"Floor puzzles, 32 pieces","m":"Puzzle Huddle","r":["Black","Ages 3–5"],"own":"black","u":"https://puzzlehuddle.com/collections/floor-puzzles-32pcs-3-5-years-old","id":"f44","src":"https://puzzlehuddle.com/cdn/shop/products/image_c701bade-c4f1-4610-a646-812d849707d6_1200x1200.jpg?v=1637442265","x":"32-piece floor puzzles starring Black kids, for ages 3–5.","img":"b6fb8e6001c481c2beffd515f08534cb.jpg","pc":"Puzzle Huddle"},{"c":"puzzles","n":"Puzzles featuring Black children","m":"Upbounders","r":["Black"],"own":"black","u":"https://upbounders.com/shop/puzzles","id":"f45","src":"https://images.squarespace-cdn.com/content/v1/66421c28ba61883538db10da/7e70aae5-d984-4621-ba1c-3a0e87c455db/Wooden+Tray+Puzzle_UPB_Be+You+Rainbow+48+Piece+Wooden+Tray+Puzzle+-+white+backgroun.jpeg","x":"Wooden puzzles featuring Black and Brown children.","img":"989dba5e9dfcdbf31eeaa08658381363.jpg","pc":"Upbounders"},{"c":"puzzles","n":"Family games","m":"Brown Toy Box","r":["Black"],"own":"black","u":"https://browntoybox.com/collections/games","id":"f46","src":"https://browntoybox.com/cdn/shop/products/BrownToyBox-Memory-Match-Game-Contents-1024X1024.jpg?v=1644760763","x":"Family games with Black characters, like a careers memory-match game.","img":"cf9c7570075756dc789a0fa333700dfc.jpg","pc":"Brown Toy Box"},{"c":"puzzles","n":"Magnetic funny faces game","m":"Maisonette","r":["Many skin tones"],"u":"https://www.maisonette.com/product/magnetic-game-box-funny-faces","id":"f47","src":"https://i.ebayimg.com/images/g/7WgAAOSwQ7haxTU1/s-l1600.jpg","x":"A magnetic game where kids build silly faces in different skin tones.","img":"b38b923bc5a9fcbe8890e5269cbed150.jpg","pc":"Maisonette"},{"c":"puzzles","n":"Eid al-Adha story and fridge magnet puzzle","m":"Eastern Toybox","r":["Muslim families"],"u":"https://easterntoybox.ca/collections/toys-educational/products/eid-al-adha-story-and-fridge-magnet-puzzle","id":"f48","own":"pogm","loc":"Canada","x":"A story and fridge-magnet puzzle about Eid al-Adha."},{"c":"puzzles","n":"Indigenous large peg puzzle: Fox & Friends","m":"Just Jigsaws, art by Alexandra Couchie","via":"Scholar's Choice","u":"https://scholarschoice.ca/products/indigenous-large-peg-puzzle-fox-friends","loc":"Stratford, Canada","p":"CAD $27","r":["Indigenous art","Toddler puzzle","Ages 2+"],"x":"A chunky toddler peg puzzle with Woodland-style art by a Nipissing First Nation artist.","src":"https://scholarschoice.ca/cdn/shop/files/img_3018.jpg?v=1761656314","id":"f98","img":"3c0d730f801050da7c4514cab897b021.jpg","pc":"Just Jigsaws, art by Alexandra Couchie"},{"c":"puzzles","n":"Bineshiiyag (Birds) Ojibwe puzzle set","m":"Native Teaching Aids","via":"Birchbark Books","u":"https://birchbarkbooks.com/products/bineshiiyag-seagull-puzzle-set","own":"indigenous","loc":"Minneapolis, USA","p":"$26 USD","r":["Ojibwe","Birds","All ages"],"x":"Picture puzzles that teach Ojibwe bird names, from a Native-owned bookstore.","id":"f99","img":"641f1c199c642c3a3a0f8b3b1d4505db.jpg","pc":"Native Teaching Aids"},{"c":"puzzles","n":"IYANU Crossroads memory game","m":"Resurrection Games","u":"https://resurrection.games/products/iyanu-crossroads","p":"$27 USD","r":["Black","Nigerian","Game","Ages 6+"],"x":"A memory game starring Iyanu, a Black girl hero from a Yoruba-inspired world in the cartoon of the same name.","src":"https://cdn.shopify.com/s/files/1/0775/2613/9112/files/RGC-LF05001FP25-01_c6f9091c-8388-4bbc-9131-372c6e12401f.webp?v=1776620453","id":"f115","img":"22b9043714426123f8faba169912db53.jpg","pc":"Resurrection Games"},{"c":"puzzles","n":"Go Culture! Adinkra symbols card game","m":"Orijin Bees","u":"https://orijinbees.com/products/go-culture-african-symbols-educational-card-game-adinkra-series-by-orijin-bees","own":"black","loc":"USA","p":"$25 USD","r":["Black","Ghanaian","Card game","Ages 4+"],"x":"A simple matching game that teaches 15 Adinkra symbols from Ghana.","src":"https://cdn.shopify.com/s/files/1/0081/6368/8515/products/image_4ea3dbcb-91c3-4d3a-8bfa-aac31509419d.jpg?v=1764530421","id":"f116"},{"c":"puzzles","n":"Lil' Lotería: bilingual picture bingo","m":"Lil' Libros","u":"https://lillibros.com/products/loteria","own":"pogm","loc":"Los Angeles, USA","p":"$22 USD","r":["Latine","Spanish & English","Game","Ages 3+"],"x":"The classic Latin American lotería game, made for little kids.","src":"https://lillibros.com/cdn/shop/products/loteria.jpg?v=1717000902","id":"f107","img":"457038b3fec3bb66bb59af4b7301cf2f.jpg","pc":"Lil' Libros"},{"c":"puzzles","n":"La Catrina emotions puzzle duo","m":"Lil' Libros","u":"https://lillibros.com/products/la-catrina-puzzle-duo","own":"pogm","loc":"Los Angeles, USA","p":"$15 USD","r":["Día de los Muertos","Spanish & English","Feelings","Ages 2+"],"x":"Two-piece puzzles matching feelings words in Spanish and English, featuring La Catrina.","src":"https://lillibros.com/cdn/shop/files/Screenshot2024-02-21at6.28.37PM.png?v=1708569010","id":"f108","img":"d29a4b1610d50433f029ab54d8d90a76.webp","pc":"Lil' Libros"},{"id":"f170","c":"puzzles","n":"Little Feminist memory match","m":"Mudpuppy","via":"Barefoot Books","u":"https://barefootbooks.com/ca/little-feminist-memory-match-game","loc":"Canada","p":"CAD $9","r":["Inspiring women","Memory game","Ages 3+"],"x":"A small memory game with colourful portraits of real women who changed the world.","ca":{"u":"https://barefootbooks.com/ca/little-feminist-memory-match-game","s":"Barefoot Books"},"src":"https://www.barefootbooks.com/media/catalog/product/m/u/mudpuppypress_littlefeminist-minimemorymatch_box_rgb_1000px_72dpi_1.jpg"},{"id":"f171","c":"puzzles","n":"Fairytale Spinner Game","m":"eeBoo","u":"https://eeboo.com/products/fairytale-spinner-game?variant=38065029972166","p":"$26 USD","r":["Storytelling","Game","2–4 players"],"x":"Players spin to collect a scene, a hero and a rival, then tell their own fairy tale together.","src":"https://eeboo.com/cdn/shop/files/FAIRG2_1_copy.jpg?v=1696347198","img":"bed6220d08a57560dc21b8da2456e9a2.jpg","pc":"eeBoo"},{"id":"f173","c":"puzzles","n":"My Hair, My Crown wooden tray puzzle","m":"Mudpuppy, illustrated by Tabitha Brown","u":"https://www.mudpuppy.com/collections/3-4-years/products/my-hair-my-crown-wooden-tray-puzzle","p":"$17–25 USD","r":["Black","Natural hair","First puzzle","Ages 1+"],"x":"A chunky 8-piece wooden first puzzle celebrating Black kids' hairstyles, matching the board book of the same name.","src":"https://www.mudpuppy.com/cdn/shop/files/MP_WoodenTrayPuzzle_MyHairMyCrown_INT1_9780735380776_1200x1200.jpg?v=1704402525","img":"57014638fba4a9e961da8c225331efc2.jpg","pc":"Mudpuppy, illustrated by Tabitha Brown"},{"id":"f176","c":"puzzles","n":"Animals of the World 100-piece puzzle","m":"Mudpuppy, illustrated by Kaley McKean","u":"https://www.mudpuppy.com/collections/puzzles-toys-for-ages-4-5-years/products/animals-of-the-world-100-piece-puzzle","p":"$17 USD","r":["World","Animals","100 pieces","Ages 5+"],"x":"A colourful 100-piece puzzle of wildlife from around the world, a nice way to talk about the places families come from.","src":"https://www.mudpuppy.com/cdn/shop/files/MP_100PiecePuzzle_AnimalsOfTheWorld_CVR_9780735386167_1200x1200.jpg?v=1748029632","img":"40275911a249046a207c936c392dcaf4.jpg","pc":"Mudpuppy, illustrated by Kaley McKean"},{"id":"f177","c":"puzzles","n":"Moonlight Ballet 100-piece glow-in-the-dark puzzle","m":"Mudpuppy, illustrated by Corey Egbert","via":"Loyalty Bookstores","u":"https://loyaltybookstores.com/book/9780735379039","own":"black","loc":"Washington, DC, USA","p":"$14 USD","r":["Ballet","Glow in the dark","100 pieces"],"x":"A Swan Lake–inspired scene of dancers that turn into glowing fairies when the lights go out.","src":"https://images.booksense.com/images/039/379/9780735379039.jpg","img":"3b4e5fcb2817ed0f5c8eda34f5fe7cdf.jpg","pc":"Mudpuppy, illustrated by Corey Egbert"},{"id":"f178","c":"puzzles","n":"Map of Africa 70-piece geography puzzle","m":"Mudpuppy, art by Tequitia Andrews","u":"https://www.mudpuppy.com/collections/puzzles-toys-for-ages-4-5-years/products/map-of-africa-70-piece-geography-puzzle","p":"$18 USD","r":["African","Geography","70 pieces","Ages 5+"],"x":"Country-shaped pieces build the African continent, with pictures of landmarks, foods, animals and cultural items.","src":"https://www.mudpuppy.com/cdn/shop/files/MP_GeographyPuz_Africa_CVR_9780735376731_1200x1200.jpg?v=1704401390","img":"aad131564ab96f51dc21297bb64814d5.jpg","pc":"Mudpuppy, art by Tequitia Andrews"},{"id":"f179","c":"puzzles","n":"Graceful Ballerinas 75-piece lenticular puzzle","m":"Mudpuppy, art by Kathryn Selbert","u":"https://www.mudpuppy.com/collections/puzzles-toys-for-ages-4-5-years/products/graceful-ballerinas-75-piece-lenticular-puzzle","p":"$15 USD","r":["Ballet","75 pieces","Ages 5+"],"x":"A finished picture of ballerinas that seem to move and change as you tilt it.","src":"https://www.mudpuppy.com/cdn/shop/products/graceful-ballerinas-75-piece-lenticular-puzzle-9780735374737-772349_1200x1200.jpg?v=1666028001","img":"7a121fa9e479590d685840e09d85dbfd.jpg","pc":"Mudpuppy, art by Kathryn Selbert"},{"id":"f180","c":"puzzles","n":"Map of the World geography puzzle","m":"Mudpuppy","u":"https://www.mudpuppy.com/collections/puzzles-toys-for-ages-4-5-years/products/map-of-the-world-geography-puzzle","p":"$18 USD","r":["Geography","World","78 pieces","Ages 5–9"],"x":"A 78-piece world map with animals, landmarks and vehicles to find by place. Great for showing kids where their family's roots are.","src":"https://www.mudpuppy.com/cdn/shop/files/MP_GeoPuzzle_MapoftheWorld_CVR_9780735360846_1200x1200.jpg?v=1784137206","img":"48cc86d54b9672b3205094647698010a.jpg","pc":"Mudpuppy"},{"c":"play","n":"Musical jewelry box with Black ballerina","m":"Nia Ballerina","r":["Black ballerina"],"u":"https://niaballerina.com/collections/frontpage/products/nia-ballerina-musical-jewellery-box-dressing-table","id":"f53","loc":"UK","own":"black","src":"https://niaballerina.com/cdn/shop/files/IMAGE_EDIT_4a9211d1-54bd-46ba-8b4d-eae619b2a378_1024x1024.png?v=1687867712","ca":{"u":"https://kidsswag.ca/products/nia-ballerina-musical-jewelry-box-the-transition","s":"Kids Swag","own":"black"},"x":"A handmade musical jewellery box with a Black ballerina.","img":"5c814a65cdb9e83a84b33454b255d9e2.jpg","pc":"Nia Ballerina"},{"c":"play","n":"Magnetic occupation dress-up figures","m":"Melissa & Doug","r":["Many skin tones","Careers"],"id":"f55","src":"https://hip2save.com/wp-content/uploads/2021/09/melissa-doug-magnetic-dress-up-dolls-set-with-occupations.jpg","x":"Magnetic wooden dolls with career outfits to mix and match.","img":"4828bc9c485b5c743f29d1b1e926ccad.jpg","pc":"Melissa & Doug"},{"c":"play","n":"Wooden sushi party set","m":"kiko+ & gg*","r":["Japanese","Play food"],"u":"https://www.us.kikoandgg.com/products/sushi-1","id":"f58","own":"pogm","x":"A wooden sushi set for pretend play. Often sells out, so check back.","src":"https://www.us.kikoandgg.com/cdn/shop/products/sushi_product_1200x1200.jpg?v=1623664430"},{"c":"play","n":"African cultural foods play set","m":"Wintergreen","u":"https://wintergreen.ca/african-cultural-foods-mj125782","loc":"Ontario, Canada","p":"CAD $32","r":["African","Play food","Ages 2+"],"x":"Pretend fufu, plantain, okra, fish and mishkaki skewers.","src":"https://wintergreenca-1.azureedge.net/img/product/MJ125782-B.jpg?fv=6612E592B01C66D53B8D78A6A6DAE14D","id":"f117","img":"62a370910f1879cf1992f7b9da980e9e.jpg","pc":"Wintergreen"},{"c":"play","n":"Asian cultural foods play set","m":"Wintergreen","u":"https://wintergreen.ca/asian-cultural-foods-mj125783","loc":"Ontario, Canada","p":"CAD $32","r":["Asian","Play food","Ages 2+"],"x":"Dumplings with a steamer, egg rolls, rice and a mooncake.","src":"https://wintergreenca-1.azureedge.net/img/product/MJ125783-B.jpg?fv=A7F27740AA70381FB8EE7830BEDF7B37","id":"f118","img":"627f146522ae1a5826318715850fa173.jpg","pc":"Wintergreen"},{"c":"play","n":"Latin American cultural foods play set","m":"Wintergreen","u":"https://wintergreen.ca/furniture/house-play-1/latin-america-cultural-foods-mj125781","loc":"Ontario, Canada","p":"CAD $32","r":["Latine","Play food","Ages 2+"],"x":"Tacos, a tamale, an enchilada, an empanada, rice and beans, and flan.","src":"https://wintergreenca-1.azureedge.net/img/product/MJ125781-B.jpg?fv=AF3DAFC972D8D9993B61130D35C7D9D7","id":"f119"},{"c":"play","n":"Ebi (shrimp sushi) teether","m":"Loulou Lollipop","via":"Well.ca","u":"https://well.ca/products/loulou-lollipop-ebi-teether_168470.html","own":"pogm","loc":"Richmond, Canada","p":"CAD $17","r":["Asian","Baby","Teether"],"x":"A sushi teether from a Canadian, Asian-owned baby brand founded by twin sisters.","src":"https://dr9wvh6oz7mzp.cloudfront.net/i/4b87a4d96dc3499cf955fc3505659896_ra,w403,h806_pa,w403,h806.jpg","id":"f121"},{"id":"f161","c":"play","n":"Chinese breakfast play food set","m":"NUOBESTY","via":"Amazon","u":"https://www.amazon.com/dp/B091TNBCSL","r":["Chinese","Play food"],"x":"Pretend Chinese breakfast foods, like buns and dumplings, for the play kitchen.","img":"6edea119c3d675122f59b6e8345974ca.jpg","pc":"NUOBESTY"},{"c":"learn","n":"Time-In Toolkit","m":"Generation Mindful","r":["Feelings"],"u":"https://genmindful.com/products/the-time-in-toolkit","id":"f64","src":"https://genmindful.com/cdn/shop/files/time-in-toolkit-mockup.jpg?v=1754984049","x":"Cards and posters that help kids name big feelings and calm down with a grown-up.","img":"cb59d8837b62f5c126da703ba141b08c.jpg","pc":"Generation Mindful"},{"c":"learn","n":"“I’m Feeling…” emotional literacy flashcards","m":"Kids for Culture","r":["Black","Feelings"],"u":"https://www.kidsforculture.com/products/im-feeling-emotional-literacy-flashcards","id":"f63","own":"black","src":"https://scholarschoice.ca/cdn/shop/files/im-feeling-emotional-literacy-flash-082-flaemo02_3.png?v=1761656214","x":"Flashcards of Black children showing different feelings.","img":"e5ed30842e4013d3af29dc307e9de207.webp","pc":"Kids for Culture"},{"c":"learn","n":"Melanin Series skin-tone oil pastels","m":"Stapledon Arts","u":"https://stapledonarts.com/collections/top-sellers/products/melanin-series-oil-pastels","own":"black","loc":"New York, USA","p":"$15 USD","r":["Skin tones","Art supplies","Ages 5+"],"x":"Twelve realistic skin tones, deep to light, so kids can draw themselves and their family.","src":"https://stapledonarts.com/cdn/shop/files/Square-oils-double-box-transparent-shop-image.png?v=1775489195","id":"f95","img":"42add03a2f2f728c0e423dce2457e490.jpg","pc":"Stapledon Arts"},{"c":"learn","n":"Diversity stickers","m":"Baker Ross","r":["Many skin tones","Crafts"],"u":"https://www.bakerross.co.uk/diversity-foam-stickers","id":"f65","loc":"UK","src":"https://www.bakerross.co.uk/media/catalog/product/f/x/fx930z-a_1_1.jpg","x":"Foam stickers of people in many skin tones for crafts."},{"c":"learn","n":"Illustory book-making kit","m":"Lulu Jr.","r":["Crafts","Their own story"],"u":"https://lulujr.com/products/illustory","id":"f66","src":"https://woodartsupply.com/cdn/shop/products/51d0rl27zXL.jpg?v=1703543739&width=600","x":"A kit for kids to write and illustrate their own book, then have it printed.","img":"5b7ddafc2d2fbc4af100b40c05ad50c5.webp","pc":"Lulu Jr."},{"c":"learn","n":"STEAM kits","m":"Brown Toy Box","r":["Black","STEM"],"own":"black","u":"https://browntoybox.com/collections/steam-kits","id":"f67","src":"https://browntoybox.com/cdn/shop/products/BrownToyBox-Makayla-MuseumArt-FRONT-1024X1024.jpg?v=1644514588","x":"STEAM activity kits starring Black kids, like an art museum kit.","img":"97938d18f0d5a10063ad59b64ddbd5c5.jpg","pc":"Brown Toy Box"},{"c":"learn","n":"ABC Affirmations trace-and-colour workbook","m":"Liberated Young","u":"https://liberatedyoung.com/product/abc-affirmations-trace-and-color-workbook/","own":"black","loc":"Philadelphia, USA","p":"$20 USD","r":["Black","Workbook","Handwriting","PreK–Gr 2"],"x":"Letter tracing, colouring and affirmations, with Black kids on every page.","src":"https://liberatedyoung.com/wp-content/uploads/2022/10/LY-Trace-Coloring-Book-1024x683.png","id":"f93","img":"8a31f9e66886c608be6eacc934eb600a.jpg","pc":"Liberated Young"},{"c":"learn","n":"Melanin Series skin-tone acrylic paints","m":"Stapledon Arts","u":"https://stapledonarts.com/collections/top-sellers/products/melanin-series-skin-tone-acrylic-paints","own":"black","loc":"New York, USA","p":"$25 USD","r":["Skin tones","Paint","Older kids"],"x":"Ready-to-use skin-tone paints for family portraits, no mixing browns by hand.","src":"https://stapledonarts.com/cdn/shop/files/Square-open-box-acrylic-paints-transparent-shop-image.png?v=1775489293","id":"f96","img":"89561ac07f630227e58fc8c0020bfb58.jpg","pc":"Stapledon Arts"},{"c":"learn","n":"Crayola Colors of the World skin-tone crayons","m":"Crayola","via":"Staples.ca","u":"https://www.staples.ca/products/2994211-en-crayola-colors-of-the-world-skin-tone-crayons-24-count","loc":"Canada","p":"CAD ~$2–10","r":["Skin tones","Art supplies","Ages 3+"],"x":"24 crayons covering over 40 skin tones from around the world, with a 32-count box that adds hair and eye colours. The same line also comes as markers, coloured pencils, paint and construction paper.","src":"https://www.staples.ca/cdn/shop/products/cafa41f8329552522f8eb0ba6012f862860f7771_square2994211_1_350x.jpg?v=1775911787","id":"f190","img":"03efcfdfab2b78c78cfe0251df4daeed.jpg","pc":"Crayola"},{"c":"learn","n":"Crayola Colors of the World washable markers","m":"Crayola","via":"Staples","u":"https://www.staples.com/crayola-24-ct-colors-of-the-world-washable-fine-line-markers-58-7810/product_24495922","r":["Skin tones","Art supplies","Washable","Ages 3+"],"x":"24 washable skin-tone markers, in fine-line or broad-line sets, for drawing realistic portraits of family and friends.","id":"f194"},{"c":"learn","n":"Crayola Colors of the World coloured pencils","m":"Crayola","r":["Skin tones","Art supplies","Ages 3+"],"x":"24 coloured pencils in skin tones from around the world. Harder to find in Canada lately, so try school and art supply shops.","id":"f195","img":"0bce439986e6e2be648a7f9cb4a88f68.jpg","pc":"Crayola"},{"c":"learn","n":"Crayola Colors of the World construction paper","m":"Crayola","r":["Skin tones","Paper","Ages 3+"],"x":"48 sheets in 24 skin-tone colours, two of each, with a colour index sheet to help kids find their shade.","id":"f197"},{"c":"learn","n":"World Colors modelling clay (15 colours)","m":"Faber-Castell","u":"https://fabercastell.com/products/world-colors-modeling-clay-14353","p":"$7 USD","r":["Skin tones","Modelling clay","Ages 3+"],"x":"Non-drying, gluten-free clay with 6 blendable skin tones and 9 bright colours, plus 3 tools. Part of Faber-Castell's World Colors line, which also includes skin-tone crayons. Often sold out, so check back.","src":"https://fabercastell.com/cdn/shop/products/m605w1gp9u59mxk4aydb.jpg?v=1765913921","id":"f198","img":"e999240eecb739b2e998ba515d910063.jpg","pc":"Faber-Castell"},{"c":"learn","n":"Canadian Black History activity & colouring book, Vol. 1","m":"Big Dreamers","u":"https://bigdreamers.ca/products/big-dreamers-volume-1","own":"black","loc":"Montreal, Canada","p":"CAD $19","r":["Black history","Canadian","Activity book","Ages 6+"],"x":"Puzzles and colouring pages about Black Canadian trailblazers.","src":"https://bigdreamers.ca/cdn/shop/files/Big-Dreamers-Vol1-2nd-Edition-mockup-white.jpg?v=1710359108","id":"f101","img":"a0dae419dc92f7e76381d6faea408899.jpg","pc":"Big Dreamers"},{"c":"learn","n":"Alternative energy STEM bundle","m":"Team Genius Squad","u":"https://shop.teamgeniussquad.com/products/alternative-energy-bundle","own":"black","loc":"North Carolina, USA","p":"$40 USD","r":["Black","STEM","Kid founder","Ages 5+"],"x":"Solar, wind and lemon-power experiments from a brand started by a young Black girl inventor.","src":"https://cdn.shopify.com/s/files/1/0512/8080/6078/files/Photoroom_20250615_212801.jpg?v=1751245018","id":"f113","img":"6bebbfd78f4657f1481c89f95b0a5cac.jpg","pc":"Team Genius Squad"},{"c":"learn","n":"Build your own solar car: Captain Nosa","m":"Teni and Tayo Creations","u":"https://www.teniandtayo.com/product-page/build-your-own-solar-powered-car-3d-stem-puzzle-toy","own":"black","loc":"USA","p":"$25 USD","r":["African","STEM","Superhero","Ages 8+"],"x":"Kids build and paint a wooden sun-powered car, with a mission from Captain Nosa, an African superhero.","src":"https://static.wixstatic.com/media/28baa9_f839b414833e44eea824e818b972218d~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg","id":"f114","img":"3afcd49630e525627c1b62790c2c4dbe.jpg","pc":"Teni and Tayo Creations"},{"c":"books","n":"Baby picture books: Baby Goes to Market, B Is for Baby and more","m":"Atinuke, illustrated by Angela Brooksbank","via":"Bookshop.org","r":["Nigerian","West African","Black","Ages 0–5"],"x":"Nigerian-born author Atinuke follows a curious toddler through a busy West African market. Black-owned bookstores like I Like Being Me Books (Toronto) and Knowledge Bookstore (Brampton) can order it.","u":"https://bookshop.org/p/books/baby-goes-to-market-atinuke/11230008","id":"f78","src":"https://shop.walker.co.uk/cdn/shop/files/9781406390872.jpg?v=1727952157","img":"1d4328a85de1c38748d89a0ae1d698e1.webp","pc":"Atinuke, illustrated by Angela Brooksbank"},{"c":"books","n":"Curls (board book)","m":"Ruth Forman","via":"Knowledge Bookstore","u":"https://www.knowledgebookstore.com/products/curls","own":"black","loc":"Brampton, Canada","p":"CAD $12","r":["Black","Board book","Hair love","Ages 0–3"],"x":"A short, rhythmic board book where four girls show off their curly, coily and braided hair.","src":"https://www.knowledgebookstore.com/cdn/shop/files/BNCImageAPI_334882b6-35d3-4a58-9c0b-0b2385e75662_grande.jpg?v=1690674888","id":"f79"},{"c":"books","n":"Cool Cuts (board book)","m":"Mechal Renee Roe","via":"Knowledge Bookstore","u":"https://www.knowledgebookstore.com/products/cool-cuts","own":"black","loc":"Brampton, Canada","p":"CAD $12.50","r":["Black","Board book","Hair love","Boys"],"x":"Boys with afros, waves, twists and cornrows celebrate their natural hair.","src":"https://www.knowledgebookstore.com/cdn/shop/files/b_6_8f9234b6-6233-4506-839b-cd366db97874_grande.jpg?v=1690674656","id":"f80"},{"c":"books","n":"Hair Love","m":"Matthew A. Cherry & Vashti Harrison","via":"Knowledge Bookstore","u":"https://www.knowledgebookstore.com/products/hair-love","own":"black","loc":"Brampton, Canada","p":"CAD $15","r":["Black","Picture book","Hair love","Dad & daughter"],"x":"A dad learns to style his daughter's big natural hair. A good one for parents learning textured-hair care too.","src":"https://www.knowledgebookstore.com/cdn/shop/files/b_33_d03e439c-0075-4586-89eb-a77ae685abc2_grande.jpg?v=1703194940","id":"f81"},{"c":"books","n":"Des bisous au coin des yeux (Eyes That Kiss in the Corners, French)","m":"Joanna Ho","via":"Knowledge Bookstore","u":"https://www.knowledgebookstore.com/products/des-bisous-au-coin-des-yeux","own":"black","loc":"Brampton, Canada","p":"CAD $13","r":["East Asian","Picture book","French","Self-love"],"x":"A girl learns to love her eyes, which look like her mother's and grandmother's. French edition, great for immersion families.","src":"https://www.knowledgebookstore.com/cdn/shop/files/BNCImageAPI_d5292b50-00a2-4d97-a711-a5292bd7ef5c_grande.jpg?v=1696302667","id":"f83","img":"60c60200f3c32087d6b7c031448ff02f.jpg","pc":"Joanna Ho"},{"c":"books","n":"Big Family Beach Day","m":"Nina Crews","via":"Knowledge Bookstore","u":"https://www.knowledgebookstore.com/products/big-family-beach-day","own":"black","loc":"Brampton, Canada","p":"CAD $25","r":["Black","Picture book","Extended family","Ages 3–7"],"x":"Maya spends a joyful beach day with her mom, grandma, aunts, uncles and cousins.","src":"https://www.knowledgebookstore.com/cdn/shop/files/BNCImageAPI_090d7f94-239b-4199-8ccb-9a83521c7bab_grande.jpg?v=1750205503","id":"f85"},{"c":"books","n":"I Hope (board book)","m":"Monique Gray Smith & Gabrielle Grimard","via":"GoodMinds","u":"https://www.goodminds.com/collections/board-books/products/i-hope-board-book","own":"indigenous","loc":"Brantford, Canada","p":"CAD $13","r":["Indigenous","Board book","Love","Ages 0–2"],"x":"Simple, loving wishes from a parent to a child, by a Cree and Scottish author.","src":"https://www.goodminds.com/cdn/shop/files/9781459844391.jpg?v=1781633049","id":"f86"},{"c":"books","n":"We Can't Wait to Hold You (board book)","m":"Richard Van Camp","via":"GoodMinds","u":"https://www.goodminds.com/collections/board-books/products/we-can-t-wait-to-hold-you-board-book","own":"indigenous","loc":"Brantford, Canada","p":"CAD $11","r":["Indigenous","Board book","Welcoming a baby","Photos"],"x":"A photo board book by a Tłı̨chǫ Dene author about a family who can't wait to welcome their child. Lovely during an adoption wait, too.","src":"https://www.goodminds.com/cdn/shop/files/9781459842786.jpg?v=1761246363","id":"f87"},{"c":"books","n":"All My Relatives / Indinawemaaganidag (board book)","m":"Storm Angeconeb","via":"GoodMinds","u":"https://www.goodminds.com/collections/board-books/products/all-my-relatives-indinawemaaganidag-english-and-anishinaabemowin-bd","own":"indigenous","loc":"Brantford, Canada","p":"CAD $12","r":["Indigenous","Board book","Ojibwe & English","Family"],"x":"An Ojibwe artist gives thanks to all her relatives, in English and Anishinaabemowin.","src":"https://www.goodminds.com/cdn/shop/files/9781554768073.jpg?v=1718136309","id":"f88"},{"c":"books","n":"Pan Dulce: high-contrast board book (English/Spanish)","m":"Lil' Libros","u":"https://lillibros.com/products/pan-dulce-a-high-contrast-yummy-board-book-bilingual-english-spanish","own":"pogm","loc":"Los Angeles, USA","p":"$12 USD","r":["Latine","Board book","Spanish & English","Ages 0–2"],"x":"Bold baby pages of conchas, churros and other Latin American sweet breads.","src":"https://lillibros.com/cdn/shop/files/Pan_Dulce_Colors_02.jpg?v=1768601980&width=300","id":"f89"},{"c":"books","n":"Indigenous book subscription box for kids","m":"Raven Reads","u":"https://ravenreads.org/","own":"indigenous","loc":"British Columbia, Canada","r":["Indigenous","Subscription","Ages 4–9"],"x":"A Métis-owned Canadian box of books by Indigenous authors, with a junior box for kids.","id":"f91"},{"c":"books","n":"Counting Bugs / Aambe Gindaasaa Mnidooshag (Ojibwe–English board book)","m":"Gretchen Sands-Gamble & Storm Angeconeb","via":"GoodMinds","u":"https://www.goodminds.com/products/counting-bugs-aambe-gindaasaa-mnidooshag-dual-language-english-and-anishinaabemowin-ojibwe-bkejwanong-walpole-island-dialect-board-book","own":"indigenous","loc":"Brantford, Canada","p":"CAD $13","r":["Indigenous","Ojibwe & English","Counting","Ages 0–3"],"x":"A sturdy counting book in English and Ojibwe.","src":"https://www.goodminds.com/cdn/shop/files/9781772604658.jpg?v=1775073399","id":"f97"},{"c":"books","n":"Marie Discovers Her Superpowers (Adoptees Like Me series)","m":"Dr. Chaitra Wirta-Leiker","via":"Grow Beyond Words","u":"https://growbeyondwords.com/marie-discovers-her-superpowers/","loc":"Denver, USA","r":["Adoption","Transracial adoptee","Picture book"],"x":"Written by a transracial adoptee psychologist: a girl learns how to answer strangers' nosy questions about her adoption.","src":"https://growbeyondwords.com/wp-content/uploads/2022/10/marie_discovers_her_superpowers_frontcover_350x350.jpg","id":"f111"},{"c":"books","n":"Lena and Ruby","m":"Kevin & Mary Qamaniq-Mason, illustrated by Marcus Cutler","via":"GoodMinds","u":"https://www.goodminds.com/products/lena-and-ruby","own":"indigenous","loc":"Brantford, Canada","p":"CAD $21","r":["Adoption","Transracial","Inuit custom adoption","Ages 3–6"],"x":"Two adopted best friends compare their adoption stories, including Inuit custom adoption and transracial adoption.","src":"https://www.goodminds.com/cdn/shop/products/9781774504666.jpg?v=1634591746","id":"f126"},{"c":"books","n":"I Am Loved!","m":"Kevin & Mary Qamaniq-Mason, illustrated by Hwei Lim","via":"GoodMinds","u":"https://www.goodminds.com/products/9781772272819","own":"indigenous","loc":"Brantford, Canada","p":"CAD $11","r":["Foster care","Inuit","Grandparents","Ages 5–8"],"x":"Pakak feels lonely in his new foster home until he remembers his grandmother's secret. Written by Inuit foster parents.","src":"https://www.goodminds.com/cdn/shop/products/9781772272819.jpg?v=1610638159","id":"f127"},{"c":"books","n":"Little Bear in Foster Care","m":"S.P. Joseph Lyons, illustrated by Julian Grafenauer","via":"GoodMinds","u":"https://www.goodminds.com/products/little-bear-in-foster-care-english-version","own":"indigenous","loc":"Brantford, Canada","p":"CAD $20","r":["Foster care","Feelings","Indigenous author","Ages 6–9"],"x":"By an Algonquin author and Sixties Scoop survivor, it helps kids in foster care name their feelings and know it's not their fault.","src":"https://www.goodminds.com/cdn/shop/products/LittleBearinFosterCareBookCoverEng-sm.png?v=1665176025","id":"f128"},{"c":"books","n":"Here Come the Grandmas!","m":"Cynthia Leitich Smith, illustrated by Aphelandra","via":"GoodMinds","u":"https://www.goodminds.com/products/here-come-the-grandmas-hc","own":"indigenous","loc":"Brantford, Canada","p":"CAD $26","r":["Grandparents","Kinship","Ages 4–8"],"x":"A joyful celebration of every grandmother in a child's life, including foster, great- and honorary grandmas.","src":"https://www.goodminds.com/cdn/shop/files/9780063444461.jpg?v=1773279406","id":"f129"},{"c":"books","n":"A Boy Like You","m":"Frank Murphy, illustrated by Kayla Harren","via":"Bookshop.org","u":"https://bookshop.org/p/books/a-boy-like-you-frank-murphy/e1415a67cf553bad","p":"$16 USD","r":["Identity","Boys","Ages 4–8"],"x":"Encourages boys to be themselves, ask for help and share their feelings.","src":"https://images-us.bookshop.org/ingram/9781534110465.jpg?v=df2e2e2cee15ab3327b0823d11f5d0f6&width=600","id":"f131","img":"15e2d723ca49ffe5d0fd2964627001a8.jpg","pc":"Frank Murphy, illustrated by Kayla Harren"},{"c":"books","n":"A Girl Like You","m":"Frank Murphy & Carla Murphy, illustrated by Kayla Harren","via":"Bookshop.org","u":"https://bookshop.org/p/books/a-girl-like-you-carla-murphy/071ede2bbb31b536","p":"$16 USD","r":["Identity","Girls","Ages 4–8"],"x":"Encourages girls to embrace what makes them unique and speak up for themselves.","src":"https://images-us.bookshop.org/ingram/9781534110960.jpg?v=6c9fbd9755ee5fe69554ddfb67e06433&width=600","id":"f132","img":"3efc2d53bd3b6634df227abcd60eb17d.jpg","pc":"Frank Murphy & Carla Murphy, illustrated by Kayla Harren"},{"c":"books","n":"A Friend Like You","m":"Frank Murphy & Charnaie Gordon, illustrated by Kayla Harren","via":"Bookshop.org","u":"https://bookshop.org/p/books/a-friend-like-you-charnaie-gordon/93a2d5bc9533be0b","p":"$16 USD","r":["Friendship","Ages 4–8"],"x":"A celebration of all kinds of friends, old and new.","src":"https://images-us.bookshop.org/ingram/9781534111127.jpg?v=a447f8cb26f9481f749978a42da252e9&width=600","id":"f133","img":"2dee67b9202b914afec59c8f77c52146.jpg","pc":"Frank Murphy & Charnaie Gordon, illustrated by Kayla Harren"},{"c":"books","n":"A Mother for Choco","m":"Keiko Kasza","via":"Bookshop.org","u":"https://bookshop.org/p/books/a-mother-for-choco-keiko-kasza/2133c1468617b087","p":"$18 USD","r":["Adoption","Families that don't match","Ages 2–6"],"x":"Choco looks for a mother who looks like him and finds one in Mrs. Bear and her family of mixed animal kids.","src":"https://images-us.bookshop.org/ingram/9780399218415.jpg?v=enc-v1&width=600","id":"f136","img":"47358b78add587bb36537218a56e3239.jpg","pc":"Keiko Kasza"},{"c":"books","n":"Real Sisters Pretend","m":"Megan Dowd Lambert, illustrated by Nicole Tadgell","via":"Bookshop.org","u":"https://bookshop.org/p/books/real-sisters-pretend-megan-dowd-lambert/79bc5fd56fbeefb8","p":"$9 USD","r":["Adoption","Transracial","Two moms","Siblings"],"x":"Two adopted sisters play pretend while staying sure they are real sisters.","src":"https://images-us.bookshop.org/ingram/9780884487845.jpg?v=enc-v1&width=600","id":"f137"},{"id":"f141","c":"books","n":"Some Moms","m":"Fifi Abu","via":"Harvard Book Store","u":"https://www.harvard.com/book/9781223186788","p":"$17 USD","r":["Moms","Rhyming","Ages 2–5"],"x":"A rhyming read-aloud celebrating all the different personalities, talents and roles of moms.","src":"https://images.booksense.com/images/788/186/9781223186788.jpg","img":"b48d6fa01d16e77b812e69947da5ae23.jpg","pc":"Fifi Abu"},{"id":"f172","c":"books","n":"Let's Celebrate Día de Muertos (board book)","m":"Paulina Suarez, illustrated by Priscilla Moreno","via":"Mudpuppy","u":"https://www.mudpuppy.com/collections/3-4-years/products/lets-celebrate-dia-de-muertos-board-book","p":"$10 USD","r":["Mexican","Celebrations","Board book"],"x":"Brings the joy and traditions of Día de Muertos to little ones, from the Let's Celebrate series.","src":"https://www.mudpuppy.com/cdn/shop/files/MP_BoardBook_DiaDeMuertos_CVR_9780735382237_1200x1200.jpg?v=1719244372"},{"id":"f174","c":"books","n":"We Are Black History (board book)","m":"Tequitia Andrews","via":"Mudpuppy","u":"https://www.mudpuppy.com/collections/3-4-years/products/we-are-black-history-board-book","p":"$10 USD","r":["Black history","Board book","Role models"],"x":"Introduces little ones to Black leaders and trailblazers, from civil rights heroes to scientists, artists and athletes.","src":"https://www.mudpuppy.com/cdn/shop/files/MP_BoardBook_WeAreBlackHistory_CVR_9780735382572_1200x1200.jpg?v=1719244628"},{"id":"f175","c":"books","n":"My Hair, My Crown (board book)","m":"Tonya Abari","via":"Mudpuppy","u":"https://www.mudpuppy.com/collections/3-4-years/products/my-hair-my-crown-board-book","p":"$13 USD","r":["Black","Natural hair","Board book"],"x":"Rhyming words and bold pictures celebrate Black hairstyles, with a mirror on the last page so kids can see their own crown.","src":"https://www.mudpuppy.com/cdn/shop/files/MP_BoardBook_MyHairMyCrown_CVR_9780735374614_1200x1200.jpg?v=1704298731"},{"c":"care","n":"Baby hair and skin care","m":"Proudly","r":["Melanated skin","Textured hair"],"u":"https://www.proudly.com/","id":"f70","src":"https://www.proudly.com/cdn/shop/files/PDP-Alt-Images_Detangler_01_3000x_2x_main.webp?v=1765223699&width=533","x":"Gentle baby and kids' hair and skin care made for melanated skin and textured hair.","img":"685c13e9e312741025680ba9f6aba5f1.webp","pc":"Proudly"},{"c":"care","n":"Sunscreen for darker skin","m":"Black Girl Sunscreen","r":["Melanated skin"],"own":"black","u":"https://www.blackgirlsunscreen.com/","id":"f71","src":"https://blackgirlsunscreen.com/wp-content/uploads/2026/02/HeroSun-Ready-Stick-1024x1024.jpg","x":"Sunscreen that goes on clear on darker skin, with no white cast."},{"c":"care","n":"Kids' hair and body products","m":"Alaffia","r":["Textured hair","Fair trade"],"u":"https://www.alaffia.com/collections/kids-collection","id":"f72","src":"https://www.alaffia.com/cdn/shop/products/BabiesKids-Renderings_SH-W-Lav_1.jpg?v=1654760844","x":"Fair-trade kids' shampoo, body wash and lotion."},{"c":"care","n":"Satin pillowcases","r":["Protects curly hair"],"u":"https://www.graceeleyae.com/","id":"f73","m":"Grace Eleyae","own":"black","x":"Satin pillowcases that help curly and coily hair keep moisture overnight.","img":"500fb989d7904ee3deb0a9fc6afb054a.webp","pc":"Grace Eleyae"},{"c":"care","n":"Detangler brush","m":"Felicia Leatherwood (Brush With The Best)","u":"https://brushwiththebest.com/products/felicia-leatherwood-detangler-brush-black","own":"black","loc":"Los Angeles, USA","p":"$22 USD","r":["Textured hair","Detangling","Curls & coils"],"x":"A flexible brush from a Black natural-hair stylist that makes wash day gentler.","src":"https://cdn.shopify.com/s/files/1/0280/5966/4459/products/BWTB_-08-2.jpg?v=1681250687","id":"f109","img":"fa629e49878810af38109effed63bc76.jpg","pc":"Felicia Leatherwood (Brush With The Best)"},{"c":"care","n":"PuffCuff Micro hair clamps (5-pack)","m":"PuffCuff","u":"https://thepuffcuff.com/products/micro-1-5-inch-5-pack","own":"black","loc":"Georgia, USA","p":"$18 USD","r":["Textured hair","Puffs","No snagging"],"x":"Small clamps that hold kids' puffs without the pulling and breakage elastics cause.","src":"https://thepuffcuff.com/cdn/shop/files/PC_MICRO2017_b89c44ed-7593-44c0-a214-e5f5454b7d58.jpg?v=1764958081","id":"f110","img":"c0ac694ccba8cf33d49fe7209721853f.jpg","pc":"PuffCuff"},{"c":"care","n":"Royal Kyree kids' detangler and detangling kit","m":"Royal Kyree","u":"https://royalkyree.com/products/easy-detangling-kit-royal-kyree","loc":"USA","p":"$19–50 USD","r":["Kids' hair care","Detangling","Allergy friendly"],"x":"A leave-in moisturizing detangler spray for kids, free of drying alcohols, sold alone (US$19) or in a 3-step kit with a detangling brush and hair oil (US$50). Both showed as sold out recently, so check back.","src":"https://royalkyree.com/cdn/shop/files/rn-image_picker_lib_temp_970b071a-531f-466e-a049-8342332a2ab3.png?v=1774642732","id":"f192","img":"0d8ffea46fb5bc110abf4fa05666247e.jpg","pc":"Royal Kyree"},{"c":"care","n":"Natural & Brown hair oils","m":"Natural And Brown","u":"https://naturalandbrown.com/products/hair-growth-oil","loc":"USA","p":"$24 USD","r":["Natural hair","Coily & curly hair","Hair oil"],"x":"Scalp and hair oils for natural hair: Sensational Blend (avocado, castor, coconut and peppermint) and Sugar Apricot. Made for all ages rather than kids specifically, and the peppermint and fragrance may be strong for little ones.","src":"https://naturalandbrown.com/cdn/shop/products/best-growth-oil.jpg?v=1708530956&width=1500","id":"f193","img":"1280e5946ca214daa2193557f87f9899.jpg","pc":"Natural And Brown"},{"c":"home","n":"Skin-tone tights and dance wear","m":"Blendz Apparel","r":["Many skin tones","Dance"],"u":"https://blendzapparel.com/","id":"f75","x":"Tights and ballet and jazz shoes in skin-tone shades, so dancers don't have to dye their own. Founded by dancer and studio owner Jamia Ramsey.","own":"black","loc":"Atlanta, USA"},{"c":"home","n":"Cards and wrapping paper","m":"Little Muffin Cakes","r":["Black and brown kids"],"u":"https://littlemuffincakes.com/collections/wrapping-paper-sheets","id":"f77","src":"https://littlemuffincakes.com/cdn/shop/products/little-muffincakes-baby-boutique-greeting-card-birthday-boy-greeting-card-29168241443012_740x.jpg?v=1627412565","ca":{"u":"https://kidsswag.ca/collections/little-muffincakes","s":"Kids Swag","own":"black"},"own":"black","x":"Greeting cards and wrapping paper with Black and brown kids."},{"n":"All You Can Ever Know","m":"Nicole Chung","via":"Bookshop.org","u":"https://bookshop.org/p/books/all-you-can-ever-know-a-memoir-nicole-chung/b05db23c79ca1d06","p":"$16 USD","r":["Adoptee voice","Transracial adoption","Memoir"],"x":"A Korean American adoptee on growing up in a white family and finding her birth family, and why racial mirrors matter.","src":"https://images-us.bookshop.org/ingram/9781948226370.jpg?v=9d97099978d0de650e7b79c0ce4b8721&width=600","id":"f143","c":"grown"},{"n":"In Their Own Voices: Transracial Adoptees Tell Their Stories","m":"Rhonda Roorda & Rita James Simon","via":"Bookshop.org","u":"https://bookshop.org/p/books/in-their-own-voices-transracial-adoptees-tell-their-stories-rhonda-roorda/21c3ad6b696e46dd","p":"$31 USD","r":["Adoptee voice","Interviews"],"x":"Black and biracial adults adopted by white families share what helped and what hurt.","src":"https://images-us.bookshop.org/ingram/9780231118293.jpg?v=enc-v1&width=600","id":"f145","c":"grown"},{"n":"Invisible Boy: A Memoir of Self-Discovery","m":"Harrison Mooney","via":"AALBC","u":"https://aalbc.com/books/9781586423469","own":"black","p":"$19 USD","r":["Adoptee voice","Canadian","Memoir"],"x":"A Black Canadian adoptee on growing up in a white evangelical family in B.C. and reconnecting with his birth mother.","src":"https://aalbc.com/og/book-9781586423469.jpg","id":"f146","c":"grown"},{"n":"Raising Resilient Black Kids","m":"Erlanger A. Turner","via":"Knowledge Bookstore","u":"https://www.knowledgebookstore.com/products/raising-resilient-black-kids","own":"black","loc":"Brampton, Canada","p":"CAD $39","r":["Racial stress","Practical guide"],"x":"A psychologist's tools to help Black kids cope with race-based stress, useful for parents of Black adoptees.","src":"https://www.knowledgebookstore.com/cdn/shop/files/BNCImageAPI_36795571-a852-48dd-9f24-62fcc3365b8d_grande.jpg?v=1731456310","id":"f151","c":"grown"},{"n":"You Should Be Grateful: Stories of Race, Identity, and Transracial Adoption","m":"Angela Tucker","via":"Bookshop.org","u":"https://bookshop.org/p/books/you-should-be-grateful-stories-of-race-identity-and-transracial-adoption-angela-tucker/03624d1501da6db9","p":"$18 USD","r":["Adoptee voice","Transracial adoption","Memoir"],"x":"A Black adoptee raised by a white family writes about identity, searching for her birth family, and what transracial adoptees need.","src":"https://images-us.bookshop.org/ingram/9780807093375.jpg?v=88b9142b6b1353e43241fe677e5e5b88&width=600","id":"f142","c":"grown","img":"78c4f0b61d71fa6844bd4cc19a3003e4.jpg","pc":"Angela Tucker"}]}</script>
+<script id="ms-app">
+(function(){
+"use strict";
+var CATS = {
+  figures:"Figures & building sets", dolls:"Dolls", puzzles:"Puzzles & games",
+  play:"Pretend play & dress-up", learn:"Art, learning & feelings",
+  books:"Books", care:"Hair, skin & body care", home:"Clothing, home & gifts", grown:"For grown-ups"
+};
+var ORDER = Object.keys(CATS);
+var DATA = JSON.parse(document.getElementById("ms-data").textContent);
+var items = DATA.items.slice();
+var hero = DATA.hero || null;
+var cfg = Object.assign({}, DATA.cfg || {});
+var S = {cat:"all", admin:false, canSuggest:false, uid:null, db:null, art:null, assets:null, sugs:[], mine:[], dirty:false, cleaned:false, readOnly:false};
+try { var sc = localStorage.getItem("ms-cat"); if (sc && (sc === "all" || CATS[sc])) S.cat = sc; } catch (e) {}
+
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]; }); }
+function safeUrl(u){ u = String(u || "").trim(); if (!u) return ""; if (!/^https?:\/\//i.test(u)) u = "https://" + u; try { var x = new URL(u); return (x.protocol === "https:" || x.protocol === "http:") ? x.href : ""; } catch (e) { return ""; } }
+function $(id){ return document.getElementById(id); }
+function sortItems(){ items.sort(function(a,b){ var fa = a.fav ? 0 : 1, fb = b.fav ? 0 : 1; if (fa !== fb) return fa - fb; return fa === 0 ? 0 : ORDER.indexOf(a.c) - ORDER.indexOf(b.c); }); }
+var lastList = [];
+function hay(i){ return [i.n,i.m,i.via,i.loc,i.x,CATS[i.c],(i.r||[]).join(" "), i.own==="black" ? "black-owned black owned pogm" : i.own==="indigenous" ? "indigenous-owned indigenous owned first nations pogm" : i.own ? "pogm owned" : "", i.ca ? "canada canadian " + (i.ca.s || "") : "", i.fav ? "top pick favourite favorite" : ""].join(" ").toLowerCase(); }
+var toastT;
+function toast(msg){ var t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(function(){ t.hidden = true; }, 4200); }
+
+/* ---------- Hero illustration (shown until a photo is added) ---------- */
+function doll(x, y, skin, hair, outfit, hairColor){
+  var s = "", hy = y - 92;
+  if (hair === "afro") s += '<circle cx="'+x+'" cy="'+(hy-4)+'" r="38" fill="'+hairColor+'"/>';
+  if (hair === "puffs") s += '<circle cx="'+(x-26)+'" cy="'+(hy-22)+'" r="15" fill="'+hairColor+'"/><circle cx="'+(x+26)+'" cy="'+(hy-22)+'" r="15" fill="'+hairColor+'"/>';
+  if (hair === "hijab") s += '<circle cx="'+x+'" cy="'+(hy+2)+'" r="35" fill="'+hairColor+'"/><rect x="'+(x-30)+'" y="'+(hy+10)+'" width="60" height="34" rx="14" fill="'+hairColor+'"/>';
+  if (hair === "braids") s += '<rect x="'+(x-34)+'" y="'+(hy-6)+'" width="11" height="62" rx="5" fill="'+hairColor+'"/><rect x="'+(x+23)+'" y="'+(hy-6)+'" width="11" height="62" rx="5" fill="'+hairColor+'"/>';
+  if (hair === "fringe") s += '<rect x="'+(x-34)+'" y="'+(hy-10)+'" width="68" height="42" rx="10" fill="'+hairColor+'"/><circle cx="'+(x+24)+'" cy="'+(hy-26)+'" r="7" fill="#e0607e"/>';
+  s += '<rect x="'+(x-30)+'" y="'+(y-60)+'" width="60" height="60" rx="24" fill="'+outfit+'"/>';
+  s += '<rect x="'+(x-30)+'" y="'+(y-22)+'" width="60" height="22" fill="'+outfit+'"/>';
+  s += '<circle cx="'+x+'" cy="'+hy+'" r="'+(hair==="hijab"?25:29)+'" fill="'+skin+'"/>';
+  if (hair === "bob") s += '<path d="M'+(x-31)+' '+(hy+6)+' A31 31 0 0 1 '+(x+31)+' '+(hy+6)+' L'+(x+31)+' '+(hy-4)+' Q'+x+' '+(hy-18)+' '+(x-31)+' '+(hy-4)+' Z" fill="'+hairColor+'"/>';
+  if (hair === "fringe") s += '<path d="M'+(x-31)+' '+(hy-5)+' A31 31 0 0 1 '+(x+31)+' '+(hy-5)+' Z" fill="'+hairColor+'"/>';
+  if (hair === "short") s += '<path d="M'+(x-29)+' '+(hy-2)+' A29 29 0 0 1 '+(x+29)+' '+(hy-2)+' Q'+x+' '+(hy-14)+' '+(x-29)+' '+(hy-2)+' Z" fill="'+hairColor+'"/>';
+  if (hair === "braids" || hair === "puffs") s += '<path d="M'+(x-29)+' '+(hy-4)+' A29 29 0 0 1 '+(x+29)+' '+(hy-4)+' Q'+x+' '+(hy-16)+' '+(x-29)+' '+(hy-4)+' Z" fill="'+hairColor+'"/>';
+  s += '<circle cx="'+(x-9)+'" cy="'+(hy+2)+'" r="3" fill="#1f2340"/><circle cx="'+(x+9)+'" cy="'+(hy+2)+'" r="3" fill="#1f2340"/>';
+  s += '<path d="M'+(x-8)+' '+(hy+12)+' Q'+x+' '+(hy+19)+' '+(x+8)+' '+(hy+12)+'" stroke="#1f2340" stroke-width="2.5" fill="none" stroke-linecap="round"/>';
+  s += '<circle cx="'+(x-16)+'" cy="'+(hy+11)+'" r="4" fill="#e8798a" opacity=".45"/><circle cx="'+(x+16)+'" cy="'+(hy+11)+'" r="4" fill="#e8798a" opacity=".45"/>';
+  return s;
+}
+function block(x, y, size, color, letter){
+  return '<rect x="'+x+'" y="'+(y-size)+'" width="'+size+'" height="'+size+'" rx="6" fill="'+color+'"/>' +
+    '<text x="'+(x+size/2)+'" y="'+(y-size/2+size*0.17)+'" text-anchor="middle" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="800" font-size="'+(size*0.5)+'" fill="#ffffff">'+letter+'</text>';
+}
+function illustration(){
+  var s = '<svg viewBox="0 0 600 450" role="img" aria-label="Illustration of a toy shelf with dolls of many skin tones and backgrounds, including Black, East Asian and South Asian dolls and a doll wearing a hijab, plus alphabet blocks">';
+  s += '<rect width="600" height="450" fill="var(--panel)"/>';
+  s += '<circle cx="520" cy="70" r="46" fill="var(--sun)" opacity=".85"/>';
+  // top shelf
+  s += doll(90, 200, "#5a3825", "afro", "#3b3f9e", "#2a1a10");
+  s += doll(185, 200, "#f1c27d", "bob", "#e0607e", "#3b2416");
+  s += doll(280, 200, "#c68642", "hijab", "#2f8f6b", "#7b4fa8");
+  s += doll(375, 200, "#8d5524", "braids", "#f2b632", "#1a0f08");
+  s += doll(470, 200, "#ffdbac", "short", "#4aa3c9", "#c58b3c");
+  s += '<rect x="30" y="200" width="540" height="18" rx="4" fill="var(--wood)"/><rect x="30" y="216" width="540" height="6" fill="var(--wood-dark)"/>';
+  // bottom shelf
+  s += block(60, 390, 64, "#3b3f9e", "A") + block(128, 390, 64, "#e0607e", "B") + block(94, 326, 64, "#2f8f6b", "C");
+  s += doll(260, 390, "#e0ac69", "puffs", "#7b4fa8", "#2a1a10");
+  s += doll(358, 390, "#f3cfa6", "fringe", "#2f8f6b", "#141414");
+  s += doll(455, 390, "#3d2516", "short", "#e05a3c", "#120b06");
+  s += block(510, 390, 52, "#4aa3c9", "Z");
+  s += '<rect x="30" y="390" width="540" height="18" rx="4" fill="var(--wood)"/><rect x="30" y="406" width="540" height="6" fill="var(--wood-dark)"/>';
+  return s + '</svg>';
+}
+
+/* ---------- Static shell ---------- */
+var SEARCH_ICON = '<svg viewBox="0 0 24 24" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
+var catOptions = ORDER.map(function(k){ return '<option value="'+k+'">'+esc(CATS[k])+'</option>'; }).join("");
+document.getElementById("app").innerHTML =
+'<header class="hero"><div class="wrap">' +
+  '<div class="hero-text">' +
+    '<div class="eyebrow">From adoptive families, for our kids</div>' +
+    '<h1>Where every kid can <span>find themselves</span> in play</h1>' +
+    '<p class="lede">Dolls, figures, puzzles, books and everyday care products that reflect many races, cultures, families and abilities. Look for <strong>PoGM-owned</strong> and <strong>Black-owned</strong> badges if you want to buy from makers of colour.</p>' +
+    '<div class="hero-cta"><a class="btn" href="#list">Browse the list</a><a class="btn ghost" href="#suggest">Suggest a find</a></div>' +
+  '</div>' +
+  '<figure class="art"><div class="frame" id="hero-frame"></div><figcaption id="hero-cap" hidden></figcaption><div class="hero-admin" id="hero-admin" hidden></div></figure>' +
+'</div></header>' +
+'<section class="steps" aria-label="How the list works"><div class="wrap">' +
+  '<div class="step"><b>1</b><div><h2>Browse</h2><p>Search by toy, shop or keyword, or pick a category.</p></div></div>' +
+  '<div class="step"><b>2</b><div><h2>Suggest</h2><p>Found something great? Send it in with a link.</p></div></div>' +
+  '<div class="step"><b>3</b><div><h2>Reviewed</h2><p>Every suggestion is checked before it goes on the list.</p></div></div>' +
+'</div></section>' +
+'<div class="bar" id="list"><div class="wrap">' +
+  '<div class="row"><label class="search" for="q">'+SEARCH_ICON+'<input id="q" type="search" placeholder="Search toys, shops or keywords (e.g. braids, wheelchair, South Asian)" aria-label="Search toys"></label>' +
+  '<label class="toggle" for="own"><input id="own" type="checkbox"> PoGM- or Black-owned only</label><label class="toggle" for="cnd"><input id="cnd" type="checkbox"> Sold in Canada</label></div>' +
+  '<div class="chips" id="chips" role="group" aria-label="Categories"></div>' +
+'</div></div>' +
+'<section class="panel" id="photos-wrap" hidden><div class="wrap" style="padding-top:24px"><div class="box photos" id="photos"></div></div></section>' +
+'<main><div class="wrap"><div class="listhead"><p class="count" id="count" aria-live="polite"></p><p class="legend"><span class="tag own">PoGM-owned</span> owned by people of the global majority (people of colour) · <span class="tag own">Black-owned</span> · <span class="tag own">Indigenous-owned</span> · <span class="tag price">$</span> price range in USD · Stock and prices change, so check the shop before you buy.</p></div><div class="grid" id="grid"></div>' +
+  '<div class="empty" id="empty" hidden>Nothing matches yet. <button type="button" class="linkbtn" id="reset">Clear search and filters</button></div></div></main>' +
+'<section class="panel" id="review-wrap" hidden><div class="wrap"><div class="box review" id="review"></div></div></section>' +
+'<section class="panel" id="suggest"><div class="wrap"><div class="box" id="suggest-box"></div></div></section>' +
+'<footer><div class="wrap">' +
+  '<div><h2>Why this list exists</h2><p>Hi, I’m Chelsey, a solo parent in Canada raising a toddler in a family built through transracial adoption. Our kids deserve toys, books and care products that look like them, and finding them took far more searching than it should have. This list started as my spreadsheet and grows as other families share their finds.</p></div>' +
+  '<div><h2>About the links</h2><p>Links point to independent shops, Etsy makers and big retailers. Cards marked “Search for it” don’t have a shop link yet and open a web search instead.</p></div>' +
+  '<div><h2>Spot something wrong?</h2><p>If an item is tagged incorrectly (for example, marked PoGM- or Black-owned when it isn’t), or you feel something shouldn’t be here because the owner or company is harming the communities it claims to represent through these toys and products, please <a href="#suggest">let me know</a> and I will remove it.</p></div>' +
+'</div></footer>' +
+'<dialog id="dlg"><form id="frm" method="dialog" novalidate>' +
+  '<h2 id="frm-title">Suggest a find</h2>' +
+  '<div class="field"><label for="f-n">Toy or product name</label><input id="f-n" required maxlength="120" placeholder="e.g. Doll with natural hair"></div>' +
+  '<div class="two"><div class="field"><label for="f-m">Brand or maker</label><input id="f-m" maxlength="80"></div>' +
+  '<div class="field"><label for="f-via">Where to buy</label><input id="f-via" maxlength="80" placeholder="e.g. Etsy, Amazon"></div></div>' +
+  '<div class="field"><label for="f-u">Link</label><input id="f-u" type="url" maxlength="600" placeholder="https://"></div>' +
+  '<div class="two"><div class="field"><label for="f-c">Category</label><select id="f-c">'+catOptions+'</select></div>' +
+  '<div class="field"><label for="f-own">Shop ownership</label><select id="f-own"><option value="">Not sure / not PoGM-owned</option><option value="pogm">PoGM-owned</option><option value="black">Black-owned</option><option value="indigenous">Indigenous-owned</option></select></div></div>' +
+  '<div class="field"><label for="f-r">Who it represents</label><input id="f-r" maxlength="160" placeholder="e.g. Black, Boy doll, Natural hair"><small>Separate with commas.</small></div>' +
+  '<div class="two"><div class="field"><label for="f-p">Price range (USD)</label><input id="f-p" maxlength="20" placeholder="e.g. $25–50"></div>' +
+  '<div class="field"><label for="f-loc">Maker location</label><input id="f-loc" maxlength="60" placeholder="optional"></div></div>' +
+  '<div class="field" id="f-pc-wrap"><label for="f-pc">Photo credit</label><input id="f-pc" maxlength="80" placeholder="e.g. Brown Toy Box"><small>Shown on the card as “Photo: …”.</small></div>' +
+  '<div class="two"><div class="field"><label for="f-cau">Canadian shop link</label><input id="f-cau" type="url" maxlength="600" placeholder="optional"></div>' +
+  '<div class="field"><label for="f-cas">Canadian shop name</label><input id="f-cas" maxlength="80" placeholder="optional"></div></div>' +
+  '<div class="field"><label for="f-x">Note</label><textarea id="f-x" rows="2" maxlength="300" placeholder="Why you love it, age range, sizing tips"></textarea></div>' +
+  '<p class="err" id="frm-err" hidden></p>' +
+  '<div class="form-acts"><button type="button" class="btn ghost" id="frm-cancel">Cancel</button><button type="submit" class="btn" id="frm-ok">Send suggestion</button></div>' +
+'</form></dialog>' +
+'<div class="pubbar" id="pubbar" hidden><div class="wrap"><span id="pub-msg">You have changes that only you can see.</span><span class="row"><button type="button" class="btn ghost small" id="pub-discard">Discard</button><button type="button" class="btn small" id="pub-go">Publish changes</button></span></div></div>' +
+'<div class="toast" id="toast" role="status" hidden></div>' +
+'<input type="file" id="hero-file" accept="image/*" hidden><input type="file" id="card-file" accept="image/*" hidden><input type="file" id="bulk-file" accept="image/*" multiple hidden>';
+
+/* ---------- Rendering ---------- */
+function renderHero(){
+  var f = $("hero-frame"), cap = $("hero-cap");
+  if (hero && hero.id) {
+    f.innerHTML = '<img src="photos/' + esc(hero.id) + '" alt="' + esc(hero.alt || "Toys from the Mirror Shelf list") + '">';
+    var img = f.querySelector("img"); img.onerror = function(){ f.innerHTML = illustration(); };
+    cap.textContent = hero.alt || ""; cap.hidden = !hero.alt;
+  } else { f.innerHTML = illustration(); cap.hidden = true; }
+  var a = $("hero-admin");
+  a.hidden = true; /* the illustration stays; photo swap turned off */
+  if (false) {
+    a.innerHTML = '<button type="button" class="btn small" id="hero-up"' + (S.assets ? '' : ' disabled title="Photo upload is not available in this view"') + '>' + (hero ? 'Change photo' : 'Add a photo') + '</button>' +
+      (hero ? '<input type="text" id="hero-alt" maxlength="140" placeholder="Describe the photo (for screen readers)" value="' + esc(hero.alt || "") + '"><button type="button" class="btn danger small" id="hero-rm">Remove photo</button>' : '');
+  }
+}
+function chipsRender(){
+  var keys = ["all"].concat(ORDER);
+  $("chips").innerHTML = keys.map(function(k){
+    var n = k === "all" ? items.length : items.filter(function(i){ return i.c === k; }).length;
+    return '<button class="chip" type="button" data-k="'+k+'" aria-pressed="'+(k===S.cat)+'">'+(k==="all"?"Everything":esc(CATS[k]))+' <span class="n">'+n+'</span></button>';
+  }).join("");
+}
+function tagsHtml(i){
+  var t = [];
+  if (i.own === "black") t.push('<span class="tag own">Black-owned</span>');
+  else if (i.own === "indigenous") t.push('<span class="tag own">Indigenous-owned</span>');
+  else if (i.own === "pogm") t.push('<span class="tag own">PoGM-owned</span>');
+  else if (i.ca && i.ca.own) t.push('<span class="tag own">'+(i.ca.own === "black" ? "Black-owned" : "PoGM-owned")+' shop in Canada</span>');
+  if (i.fav) t.push('<span class="tag pick">Top pick</span>');
+  if (i.ca) t.push('<span class="tag ca">Sold in Canada</span>');
+  if (i.p) t.push('<span class="tag price">'+esc(i.p)+'</span>');
+  (i.r || []).forEach(function(r){ t.push('<span class="tag">'+esc(r)+'</span>'); });
+  return t.join("");
+}
+function whoHtml(i){
+  return [i.m ? '<b>'+esc(i.m)+'</b>' : "", i.via && i.via !== i.m ? 'sold at '+esc(i.via) : "", i.loc ? esc(i.loc) : ""].filter(Boolean).join(" · ");
+}
+var ICONS = {
+  figures:'<rect x="4" y="9" width="16" height="10" rx="1.5"/><rect x="6.5" y="6" width="4" height="3" rx=".8"/><rect x="13.5" y="6" width="4" height="3" rx=".8"/>',
+  dolls:'<circle cx="12" cy="7" r="3.5"/><path d="M6.5 20c0-4 2.4-7 5.5-7s5.5 3 5.5 7z"/>',
+  puzzles:'<path d="M5 9h3.2a2 2 0 1 1 3.6 0H15v3.2a2 2 0 1 1 0 3.6V19H5z"/>',
+  ability:'<circle cx="11" cy="4.5" r="1.8"/><path d="M11 7.5v6h5l2 5"/><path d="M8.2 10.5a5.5 5.5 0 1 0 6.6 7.3"/>',
+  play:'<path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/><rect x="10" y="14" width="4" height="5"/>',
+  culture:'<path d="M9 3h6"/><path d="M12 3v2"/><path d="M7.5 7.5C7.5 6 9.5 5 12 5s4.5 1 4.5 2.5v8C16.5 17 14.5 18 12 18s-4.5-1-4.5-2.5z"/><path d="M7.5 11.5h9"/><path d="M12 18v3"/>',
+  learn:'<path d="M12 19s-7-4.3-7-9.2A3.8 3.8 0 0 1 12 7.6a3.8 3.8 0 0 1 7 2.2c0 4.9-7 9.2-7 9.2z"/>',
+  books:'<path d="M12 7c-2-1.5-5-2-8-1.5v12c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-12c-3-.5-6 0-8 1.5z"/><path d="M12 7v12"/>',
+  care:'<path d="M12 3.5s6 6.5 6 10.5a6 6 0 0 1-12 0c0-4 6-10.5 6-10.5z"/>',
+  grown:'<path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 10.5h1.5a2.5 2.5 0 0 1 0 5H16"/><path d="M8.5 3.5c-.8 1 .8 2 0 3M12 3.5c-.8 1 .8 2 0 3"/>',
+  home:'<path d="M9 4l-5 3 2 4 2-1v10h8V10l2 1 2-4-5-3a3 3 0 0 1-6 0z"/>'
+};
+function thumbHtml(i){
+  var btn = S.admin ? '<button type="button" class="btn small photo-btn" data-act="photo" data-id="'+esc(i.id)+'"'+(S.assets?'':' disabled')+'>'+(i.img?'Change photo':'Add photo')+'</button>' : '';
+  if (i.img) return '<div class="thumb"><img loading="lazy" src="photos/'+esc(i.img)+'" alt="'+esc(i.n)+'">'+(i.pc?'<span class="credit">Photo: '+esc(i.pc)+'</span>':'')+btn+'</div>';
+  return '<div class="thumb ph"><svg viewBox="0 0 24 24" aria-hidden="true">'+(ICONS[i.c]||ICONS.dolls)+'</svg>'+btn+'</div>';
+}
+function card(i){
+  var u = safeUrl(i.u), who = whoHtml(i);
+  var ca = i.ca && safeUrl(i.ca.u);
+  var link = u ? '<a href="'+esc(u)+'" target="_blank" rel="noopener">'+(ca && !i.via ? 'From the maker →' : 'Visit shop →')+'</a>' + (ca ? '<a class="alt" href="'+esc(ca)+'" target="_blank" rel="noopener" title="'+esc(i.ca.s || "Canadian shop")+'">In Canada'+(i.ca.s ? ': '+esc(i.ca.s) : '')+' →</a>' : '')
+    : ca ? '<a href="'+esc(ca)+'" target="_blank" rel="noopener">In Canada'+(i.ca.s ? ': '+esc(i.ca.s) : '')+' →</a>'
+    : '<a class="search-link" href="https://www.google.com/search?q='+encodeURIComponent([i.n,i.m].filter(Boolean).join(" "))+'" target="_blank" rel="noopener">Search for it →</a>';
+  var adm = S.admin ? '<span class="adm"><button type="button" class="btn ghost small'+(i.fav?' on':'')+'" data-act="fav" data-id="'+esc(i.id)+'" aria-pressed="'+(!!i.fav)+'">'+(i.fav?'★ Top pick':'☆ Pick')+'</button><button type="button" class="btn ghost small" data-act="up" data-id="'+esc(i.id)+'" aria-label="Move up">↑</button><button type="button" class="btn ghost small" data-act="down" data-id="'+esc(i.id)+'" aria-label="Move down">↓</button><button type="button" class="btn ghost small" data-act="edit" data-id="'+esc(i.id)+'">Edit</button><button type="button" class="btn danger small" data-act="remove" data-id="'+esc(i.id)+'">Remove</button></span>' : "";
+  return '<article class="card">'+thumbHtml(i)+'<div class="cat">'+esc(CATS[i.c] || "")+'</div><h3>'+esc(i.n)+'</h3>'+(who?'<p class="maker">'+who+'</p>':'')+(i.x?'<p class="note">'+esc(i.x)+'</p>':'')+'<div class="tags">'+tagsHtml(i)+'</div><div class="go">'+link+adm+'</div></article>';
+}
+function render(){
+  var words = $("q").value.toLowerCase().trim().split(/\s+/).filter(Boolean), ownOnly = $("own").checked, caOnly = $("cnd").checked;
+  var list = lastList = items.filter(function(i){ var h = hay(i); return (S.cat==="all" || i.c===S.cat) && (!ownOnly || i.own || (i.ca && i.ca.own)) && (!caOnly || i.ca || /canada/i.test(i.loc || "")) && words.every(function(w){ return h.indexOf(w) >= 0; }); });
+  $("grid").innerHTML = list.map(card).join("");
+  $("empty").hidden = list.length > 0;
+  $("count").textContent = list.length + " " + (list.length === 1 ? "find" : "finds") + (S.cat !== "all" ? " in " + CATS[S.cat] : "");
+}
+function sugSummary(s){
+  var u = safeUrl(s.u);
+  return '<h3>'+esc(s.n)+' <span class="pill">'+esc(CATS[s.c] || "")+'</span></h3>' +
+    '<p>'+[whoHtml(s), u ? '<a href="'+esc(u)+'" target="_blank" rel="noopener">Open link</a>' : 'No link'].filter(Boolean).join(" · ")+'</p>' +
+    ((s.r && s.r.length) ? '<p>'+esc(s.r.join(", "))+'</p>' : '') + (s.x ? '<p><i>'+esc(s.x)+'</i></p>' : '');
+}
+function approvedSids(){ var m = {}; items.forEach(function(i){ if (i.sid) m[i.sid] = 1; }); return m; }
+function renderReview(){
+  $("review-wrap").hidden = true;
+  return;
+  var done = approvedSids();
+  var list = S.sugs.filter(function(s){ return !done[s.sid]; });
+  var box = $("review");
+  if (!S.db) { box.innerHTML = '<h2>Suggestions to review</h2><p>Suggestions can’t load in this view. Open the page while signed in to review them.</p>'; return; }
+  box.innerHTML = '<h2>Suggestions to review <span class="pill">'+list.length+'</span></h2>' +
+    (list.length ? '<p>Only you and your editors see this. Approve opens the details so you can tidy them before they go on the list.</p><div class="sug-list">' +
+      list.map(function(s){ return '<div class="sug"><div>'+sugSummary(s)+'</div><div class="acts"><button type="button" class="btn danger small" data-sug="reject" data-sid="'+esc(s.sid)+'">Reject</button><button type="button" class="btn small" data-sug="approve" data-sid="'+esc(s.sid)+'">Approve…</button></div></div>'; }).join("") + '</div>'
+    : '<p>No suggestions waiting. When someone sends one in, it shows up here for you to approve.</p>');
+}
+function outsideHtml(){
+  var f = safeUrl(cfg.form), em = (cfg.email || "").trim(), h = "";
+  if (f) h += '<div><a class="btn" href="'+esc(f)+'" target="_blank" rel="noopener">Suggest a find ↗</a></div>';
+  if (em) h += '<p>'+(f ? 'Or email' : 'Email your find to')+' <b class="em" id="sug-email">'+esc(em)+'</b> <button type="button" class="btn ghost small" id="copy-email">Copy address</button></p>';
+  return h;
+}
+function renderSuggest(){
+  var box = $("suggest-box");
+  var head = '<h2>Suggest a find</h2>', out = outsideHtml();
+  var html;
+  if (S.admin) {
+    html = head + '<p>Add finds straight to the list.</p><div><button type="button" class="btn" id="open-add">Add to the list</button></div>';
+  } else if (out) {
+    html = head + '<p>Know a toy, book or shop that belongs here? Tell us about it, with a link if you have one. Every suggestion is reviewed before it goes on the list.</p>' + out;
+  } else {
+    html = head + '<p>Suggestions are opening soon. In the meantime, share your find with the person who sent you this page.</p>';
+  }
+  if (S.admin) {
+    html += '<div class="outside"><h3>Where visitors send suggestions</h3>' +
+      '<p>Paste a link to your form (Google Forms, Tally or Microsoft Forms) and/or an email address. Visitors see a “Suggest a find” button that opens it.</p>' +
+      '<div class="two"><div class="field"><label for="cfg-form">Form link</label><input id="cfg-form" type="url" maxlength="600" placeholder="https://forms.gle/…" value="'+esc(cfg.form || "")+'"></div>' +
+      '<div class="field"><label for="cfg-email">Email address</label><input id="cfg-email" type="email" maxlength="120" placeholder="optional" value="'+esc(cfg.email || "")+'"></div></div>' +
+      (out ? '<p><b>Visitors see:</b></p>' + out : '') + '</div>';
+  }
+  box.innerHTML = html;
+}
+var photosOpen = false;
+function renderPhotos(){
+  $("photos-wrap").hidden = !S.admin;
+  if (!S.admin) return;
+  var have = items.filter(function(i){ return i.img; }).length, missing = items.filter(function(i){ return !i.img; });
+  var pct = items.length ? Math.round(have / items.length * 100) : 0;
+  var box = $("photos");
+  var html = '<h2>Card photos</h2><p>'+have+' of '+items.length+' finds have a photo. Only you see this panel.</p><div class="meter" aria-hidden="true"><span style="width:'+pct+'%"></span></div>';
+  if (!S.assets) { box.innerHTML = html + '<p>Photo uploads aren’t available in this view. Open the page in Claude while signed in.</p>'; return; }
+  html += '<div><button type="button" class="btn ghost small" id="ph-toggle" aria-expanded="'+photosOpen+'">'+(photosOpen?'Hide the photo checklist':'Show the photo checklist')+'</button></div>';
+  if (photosOpen) {
+    html += '<p><b>How it works:</b> click “Open photo”, save the image to your device, then click “Upload” on the same row. Or save several, name each file with its code (for example <code>f31.jpg</code>), and drop them all in the box below at once. Each photo gets a “Photo: brand” credit, which you can change with Edit.</p>' +
+      '<div class="drop" id="drop" tabindex="0" role="button">Drop saved photos here, or click to choose several</div>' +
+      '<div class="ph-list">' + (missing.length ? missing.map(function(i){
+        var src = safeUrl(i.src);
+        var look = src ? '<a href="'+esc(src)+'" target="_blank" rel="noopener">Open photo ↗</a>'
+          : '<a href="https://www.google.com/search?tbm=isch&q='+encodeURIComponent([i.n,i.m].filter(Boolean).join(" "))+'" target="_blank" rel="noopener">Find a photo ↗</a>';
+        var h = src ? hostOf(src) : "", third = src && THIRD_PARTY.test(src);
+        var from = src ? '<span class="src'+(third?' warn':'')+'" title="'+(third?'This photo is from another seller or a blog. If you can, use the brand’s own photo instead.':'From the shop or brand’s own site')+'">from '+esc(h)+(third?' · try brand’s photo':'')+'</span>' : '';
+        return '<div class="ph-row"><span class="nm">'+esc(i.n)+(i.m?' · <span style="color:var(--muted)">'+esc(i.m)+'</span>':'')+'</span><code>'+esc(i.id)+'</code>'+from+look+'<button type="button" class="btn small" data-act="photo" data-id="'+esc(i.id)+'">Upload</button></div>';
+      }).join("") : '<p>Every find has a photo. Nice work.</p>') + '</div>';
+  }
+  box.innerHTML = html;
+}
+function renderAll(){ sortItems(); renderHero(); chipsRender(); render(); renderPhotos(); renderReview(); renderSuggest(); $("pubbar").hidden = !S.dirty; }
+
+/* ---------- Photo uploads ---------- */
+function hostOf(u){ try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return ""; } }
+var THIRD_PARTY = /(ebayimg|ebay\.|hip2save|toybook|thetoyinsider|walmartimages|walmart\.|bricklink|brickset|destinationbabykids|scholarschoice|woodartsupply|cratejoy|colorlandtoys|emersonandfriends|bigcommerce|media-amazon)/i;
+function shrink(file){
+  return new Promise(function(resolve){
+    if (!window.createImageBitmap || /svg|gif/.test(file.type)) return resolve(file);
+    createImageBitmap(file).then(function(bmp){
+      var max = 720, sc = Math.min(1, max / Math.max(bmp.width, bmp.height));
+      var cv = document.createElement("canvas"); cv.width = Math.round(bmp.width * sc); cv.height = Math.round(bmp.height * sc);
+      var cx = cv.getContext("2d"); cx.fillStyle = "#ffffff"; cx.fillRect(0, 0, cv.width, cv.height); cx.drawImage(bmp, 0, 0, cv.width, cv.height);
+      cv.toBlob(function(b){ resolve(b && b.size < file.size ? b : file); }, "image/jpeg", 0.86);
+    }).catch(function(){ resolve(file); });
+  });
+}
+async function uploadFor(id, file){
+  var it = items.filter(function(i){ return i.id === id; })[0]; if (!it || !file) return false;
+  if (!/^image\//.test(file.type)) { toast(file.name + " isn’t an image."); return false; }
+  try {
+    var blob = await shrink(file);
+    var r = await S.assets.upload(blob, { type: blob.type || file.type });
+    items = items.map(function(i){ return i.id === id ? Object.assign({}, i, { img: r.id, pc: i.pc || i.m || i.via || hostOf(i.src) || "" }) : i; });
+    S.dirty = true; return true;
+  } catch (e) { toast(e && e.code === "store_unavailable" ? "Upload didn’t go through. Try again." : "“" + file.name + "” couldn’t be uploaded. Try a JPG or PNG."); return false; }
+}
+async function bulkUpload(files){
+  var ids = {}; items.forEach(function(i){ ids[i.id.toLowerCase()] = i.id; });
+  var done = 0, skipped = [];
+  toast("Uploading " + files.length + " photo" + (files.length === 1 ? "" : "s") + "…");
+  for (var k = 0; k < files.length; k++) {
+    var m = files[k].name.toLowerCase().match(/^(f[a-z0-9]+?)(?:[^a-z0-9].*)?\.[a-z0-9]+$/);
+    var id = m && ids[m[1]];
+    if (!id) { skipped.push(files[k].name); continue; }
+    if (await uploadFor(id, files[k])) done++;
+  }
+  renderAll();
+  toast(done + " photo" + (done === 1 ? "" : "s") + " added" + (skipped.length ? ". Skipped " + skipped.length + " without a card code in the name (" + skipped.slice(0, 3).join(", ") + (skipped.length > 3 ? "…" : "") + ")" : "") + ". Publish when you’re ready.");
+}
+var photoTarget = null;
+
+/* ---------- Form ---------- */
+var formMode = null, formRef = null;
+function fill(o){
+  o = o || {};
+  $("f-n").value = o.n || ""; $("f-m").value = o.m || ""; $("f-via").value = o.via || ""; $("f-u").value = o.u || "";
+  $("f-c").value = o.c || (S.cat !== "all" ? S.cat : "dolls"); $("f-own").value = o.own || "";
+  $("f-r").value = (o.r || []).join(", "); $("f-p").value = o.p || ""; $("f-loc").value = o.loc || ""; $("f-x").value = o.x || ""; $("f-cau").value = (o.ca && o.ca.u) || ""; $("f-cas").value = (o.ca && o.ca.s) || ""; $("f-pc").value = o.pc || ""; $("f-pc-wrap").hidden = !o.img;
+}
+function readForm(){
+  function v(id){ return $(id).value.trim(); }
+  var o = { c: v("f-c"), n: v("f-n") };
+  ["m","via","p","loc","x"].forEach(function(k){ var val = v("f-"+k); if (val) o[k] = val; });
+  var u = safeUrl(v("f-u")); if (u) o.u = u;
+  var own = v("f-own"); if (own) o.own = own;
+  var r = v("f-r").split(",").map(function(s){ return s.trim(); }).filter(Boolean).slice(0, 8); if (r.length) o.r = r;
+  if (v("f-pc")) o.pc = v("f-pc");
+  var cau = safeUrl(v("f-cau")); if (cau) { o.ca = { u: cau }; if (v("f-cas")) o.ca.s = v("f-cas"); if (formRef && formRef.ca && formRef.ca.own) o.ca.own = formRef.ca.own; }
+  return o;
+}
+function openForm(mode, ref){
+  formMode = mode; formRef = ref || null;
+  var titles = {suggest:"Suggest a find", add:"Add to the list", edit:"Edit this find", approve:"Approve suggestion"};
+  var oks = {suggest:"Send suggestion", add:"Add to list", edit:"Save changes", approve:"Approve and add"};
+  $("frm-title").textContent = titles[mode]; $("frm-ok").textContent = oks[mode]; $("frm-err").hidden = true; $("frm-ok").disabled = false;
+  fill(mode === "edit" || mode === "approve" ? ref : null);
+  var d = $("dlg"); if (d.showModal) d.showModal(); else d.setAttribute("open", "");
+  $("f-n").focus();
+}
+function closeForm(){ var d = $("dlg"); if (d.close) d.close(); else d.removeAttribute("open"); }
+function formError(msg){ var e = $("frm-err"); e.textContent = msg; e.hidden = false; }
+function newId(p){ return p + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+
+async function onSubmit(ev){
+  ev.preventDefault();
+  var o = readForm();
+  if (!o.n) { formError("Add a name so people know what the find is."); return; }
+  if ($("f-u").value.trim() && !o.u) { formError("That link doesn’t look like a web address. It should start with https://"); return; }
+  if (formMode === "suggest") {
+    $("frm-ok").disabled = true;
+    try {
+      o.sid = newId("s"); o.at = Date.now();
+      var mine = S.mine.map(function(s){ return Object.assign({}, s); });
+      mine.push(o);
+      await S.db.doc("suggestions/" + S.uid).set({ items: mine.slice(-50) });
+      closeForm(); toast("Thanks! Your suggestion was sent for review.");
+    } catch (e) {
+      $("frm-ok").disabled = false;
+      if (e && e.code === "invalid_argument") { S.canSuggest = false; closeForm(); renderSuggest(); toast("You don’t have permission to suggest finds on this page."); }
+      else formError("Your suggestion didn’t send. Check your connection and try again.");
+    }
+    return;
+  }
+  if (formMode === "add") { o.id = newId("f"); items.push(o); toast("Added. Publish to show it to everyone."); }
+  if (formMode === "edit") { o.id = formRef.id; ["sid","img","src","fav"].forEach(function(k){ if (formRef[k]) o[k] = formRef[k]; }); items = items.map(function(i){ return i.id === o.id ? o : i; }); toast("Saved. Publish to show the change to everyone."); }
+  if (formMode === "approve") { o.id = newId("f"); o.sid = formRef.sid; items.push(o); toast("Approved. Publish to add it for everyone."); }
+  S.dirty = true; closeForm(); renderAll();
+}
+
+/* ---------- Owner actions ---------- */
+async function writeSugDoc(uid, list){
+  var ref = S.db.doc("suggestions/" + uid);
+  if (list.length) await ref.set({ items: list }); else await ref.delete();
+}
+async function rejectSug(sid){
+  var s = S.sugs.filter(function(x){ return x.sid === sid; })[0]; if (!s) return;
+  var rest = S.sugs.filter(function(x){ return x.uid === s.uid && x.sid !== sid; }).map(strip);
+  try { await writeSugDoc(s.uid, rest); toast("Suggestion rejected."); }
+  catch (e) { toast("That didn’t save. Try again in a moment."); }
+}
+function strip(s){ var o = Object.assign({}, s); delete o.uid; return o; }
+async function cleanupApproved(){
+  if (S.cleaned || !S.admin) return; S.cleaned = true;
+  var done = approvedSids(), byUid = {};
+  S.sugs.forEach(function(s){ (byUid[s.uid] = byUid[s.uid] || []).push(s); });
+  for (var uid in byUid) {
+    var all = byUid[uid], keep = all.filter(function(s){ return !done[s.sid]; });
+    if (keep.length !== all.length) { try { await writeSugDoc(uid, keep.map(strip)); } catch (e) {} }
+  }
+}
+var SKELETON_CSS = ':root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}';
+var HEAD = '<title>Mirror Shelf</title>\n<meta name="claude:viewport-fit-sides" content="cover">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">\n';
+function buildHtml(){
+  sortItems();
+  var json = JSON.stringify({ hero: hero, cfg: cfg, items: items }).replace(/</g, "\\u003c");
+  return '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>' + SKELETON_CSS + '</style></head><body>' +
+    HEAD + '<style id="ms-style">' + $("ms-style").textContent + '</style>\n<div id="app"></div>\n<script id="ms-data" type="application/json">' + json + '<\/script>\n<script id="ms-app">' + $("ms-app").textContent + '<\/script>\n</body></html>';
+}
+async function publishNow(){
+  if (!S.art) { toast("Publishing isn’t available in this view. Open the page in Claude to publish."); return; }
+  var b = $("pub-go"); b.disabled = true; b.textContent = "Publishing…";
+  try { await S.art.publish(buildHtml()); }
+  catch (e) {
+    b.disabled = false; b.textContent = "Publish changes";
+    var c = e && e.code;
+    if (c === "conflict") toast("Someone else published first. The page is reloading with their version.");
+    else if (c === "not_writer" || c === "not_granted") { toast("You don’t have permission to publish this page."); }
+    else if (c === "rate_limited") toast("Too many publishes in a row. Wait a minute and try again.");
+    else toast("Publishing didn’t work. Try again in a moment.");
+  }
+}
+
+/* ---------- Events ---------- */
+$("chips").addEventListener("click", function(e){
+  var b = e.target.closest(".chip"); if (!b) return;
+  S.cat = b.dataset.k; try { localStorage.setItem("ms-cat", S.cat); } catch (er) {}
+  chipsRender(); render();
+});
+$("q").addEventListener("input", render); $("own").addEventListener("change", render); $("cnd").addEventListener("change", render);
+$("reset").addEventListener("click", function(){ $("q").value = ""; $("own").checked = false; $("cnd").checked = false; S.cat = "all"; chipsRender(); render(); });
+$("frm").addEventListener("submit", onSubmit);
+$("frm-cancel").addEventListener("click", closeForm);
+$("grid").addEventListener("click", function(e){
+  var b = e.target.closest("button[data-act]"); if (!b || !S.admin) return;
+  var it = items.filter(function(i){ return i.id === b.dataset.id; })[0]; if (!it) return;
+  if (b.dataset.act === "photo") { photoTarget = it.id; $("card-file").click(); return; }
+  if (b.dataset.act === "fav") {
+    var on = !it.fav;
+    items = items.filter(function(i){ return i.id !== it.id; });
+    var upd = Object.assign({}, it); if (on) upd.fav = true; else delete upd.fav;
+    if (on) { var lastFav = -1; items.forEach(function(i, k){ if (i.fav) lastFav = k; }); items.splice(lastFav + 1, 0, upd); } else items.push(upd);
+    S.dirty = true; renderAll(); toast(on ? "Marked as a top pick. Publish to show it to everyone." : "Removed from top picks."); return;
+  }
+  if (b.dataset.act === "up" || b.dataset.act === "down") {
+    var k = lastList.indexOf(it), nb = lastList[k + (b.dataset.act === "up" ? -1 : 1)];
+    if (!nb || !!nb.fav !== !!it.fav || (!it.fav && nb.c !== it.c)) { toast(b.dataset.act === "up" ? "Already at the top of its group." : "Already at the bottom of its group."); return; }
+    var ia = items.indexOf(it), ib = items.indexOf(nb); items[ia] = nb; items[ib] = it;
+    S.dirty = true; var y = b.getBoundingClientRect().top; renderAll();
+    var nbtn = document.querySelector('#grid button[data-act="'+b.dataset.act+'"][data-id="'+it.id+'"]'); if (nbtn) { window.scrollBy(0, nbtn.getBoundingClientRect().top - y); nbtn.focus(); }
+    return;
+  }
+  if (b.dataset.act === "edit") openForm("edit", it);
+  if (b.dataset.act === "remove") {
+    if (b.dataset.armed) { items = items.filter(function(i){ return i.id !== it.id; }); S.dirty = true; renderAll(); toast("Removed. Publish to update the page for everyone."); }
+    else { b.dataset.armed = "1"; b.textContent = "Confirm remove"; setTimeout(function(){ if (b.isConnected) { delete b.dataset.armed; b.textContent = "Remove"; } }, 4000); }
+  }
+});
+$("review").addEventListener("click", function(e){
+  var b = e.target.closest("button[data-sug]"); if (!b) return;
+  var s = S.sugs.filter(function(x){ return x.sid === b.dataset.sid; })[0]; if (!s) return;
+  if (b.dataset.sug === "approve") openForm("approve", s);
+  else if (b.dataset.armed) { b.disabled = true; rejectSug(s.sid); }
+  else { b.dataset.armed = "1"; b.textContent = "Confirm reject"; setTimeout(function(){ if (b.isConnected && !b.disabled) { delete b.dataset.armed; b.textContent = "Reject"; } }, 4000); }
+});
+$("suggest-box").addEventListener("change", function(e){
+  if (e.target.id === "cfg-form" || e.target.id === "cfg-email") {
+    var v = e.target.value.trim();
+    if (e.target.id === "cfg-form") { var u = safeUrl(v); if (v && !u) { toast("That link doesn’t look like a web address."); return; } cfg.form = u || undefined; }
+    else { if (v && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) { toast("That email address doesn’t look right."); return; } cfg.email = v || undefined; }
+    S.dirty = true; renderSuggest(); $("pubbar").hidden = false; toast("Saved. Publish to show it to visitors.");
+  }
+});
+$("suggest-box").addEventListener("click", function(e){
+  if (e.target.id === "copy-email") {
+    var em = cfg.email || "";
+    var fallback = function(){ var r = document.createRange(); r.selectNodeContents($("sug-email")); var sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); toast("Address selected. Copy it with your keyboard."); };
+    try { navigator.clipboard.writeText(em).then(function(){ toast("Email address copied."); }, fallback); } catch (er) { fallback(); }
+    return;
+  }
+  if (e.target.id === "open-suggest") openForm("suggest");
+  if (e.target.id === "open-add") openForm("add");
+});
+$("hero-admin").addEventListener("click", function(e){
+  if (e.target.id === "hero-up") $("hero-file").click();
+  if (e.target.id === "hero-rm") { hero = null; S.dirty = true; renderAll(); toast("Photo removed. Publish to update the page."); }
+});
+$("hero-admin").addEventListener("change", function(e){
+  if (e.target.id === "hero-alt" && hero) { hero = Object.assign({}, hero, { alt: e.target.value.trim() }); S.dirty = true; $("pubbar").hidden = false; var cap = $("hero-cap"); cap.textContent = hero.alt; cap.hidden = !hero.alt; }
+});
+$("hero-file").addEventListener("change", async function(e){
+  var f = e.target.files && e.target.files[0]; e.target.value = ""; if (!f || !S.assets) return;
+  if (f.size > 20 * 1024 * 1024) { toast("That photo is over 20 MB. Choose a smaller one."); return; }
+  toast("Uploading photo…");
+  try { var r = await S.assets.upload(f); hero = { id: r.id, alt: (hero && hero.alt) || "" }; S.dirty = true; renderAll(); toast("Photo added. Add a short description, then publish."); }
+  catch (er) { toast(er && er.code === "store_unavailable" ? "Upload didn’t go through. Try again." : "That file couldn’t be uploaded. Try a JPG or PNG photo."); }
+});
+$("photos").addEventListener("click", function(e){
+  var t = e.target;
+  if (t.id === "ph-toggle") { photosOpen = !photosOpen; renderPhotos(); return; }
+  if (t.closest && t.closest("#drop")) { $("bulk-file").click(); return; }
+  var b = t.closest && t.closest("button[data-act=photo]"); if (b) { photoTarget = b.dataset.id; $("card-file").click(); }
+});
+$("photos").addEventListener("keydown", function(e){ if (e.target.id === "drop" && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); $("bulk-file").click(); } });
+["dragenter","dragover"].forEach(function(ev){ $("photos").addEventListener(ev, function(e){ var d = e.target.closest && e.target.closest("#drop"); if (d) { e.preventDefault(); d.classList.add("over"); } }); });
+$("photos").addEventListener("dragleave", function(e){ var d = e.target.closest && e.target.closest("#drop"); if (d) d.classList.remove("over"); });
+$("photos").addEventListener("drop", function(e){ var d = e.target.closest && e.target.closest("#drop"); if (!d) return; e.preventDefault(); d.classList.remove("over"); var fs = Array.prototype.slice.call(e.dataTransfer.files || []); if (fs.length) bulkUpload(fs); else toast("Save the photo to your device first, then drop the file here."); });
+$("bulk-file").addEventListener("change", function(e){ var fs = Array.prototype.slice.call(e.target.files || []); e.target.value = ""; if (fs.length) bulkUpload(fs); });
+$("card-file").addEventListener("change", async function(e){
+  var f = e.target.files && e.target.files[0]; e.target.value = ""; var id = photoTarget; photoTarget = null;
+  if (!f || !id || !S.assets) return;
+  toast("Uploading photo…");
+  if (await uploadFor(id, f)) { renderAll(); toast("Photo added. Publish when you’re ready."); }
+});
+$("pub-go").addEventListener("click", publishNow);
+$("pub-discard").addEventListener("click", function(){ items = DATA.items.slice(); hero = DATA.hero || null; cfg = Object.assign({}, DATA.cfg || {}); S.dirty = false; renderAll(); toast("Changes discarded."); });
+window.addEventListener("beforeunload", function(e){ if (S.dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+renderAll();
+
+
+})();
+</script>
+</body></html>
