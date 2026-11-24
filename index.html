@@ -85,7 +85,8 @@ main .wrap{padding-block:24px 40px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0;overflow:hidden}
 .thumb{position:relative;margin:-18px -18px 4px;aspect-ratio:4/3;max-width:none;background:var(--photo);display:grid;place-items:center;border-bottom:1px solid var(--line)}
-.thumb img{width:100%;height:100%;object-fit:contain;padding:10px;display:block}
+.thumb{overflow:hidden}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:10px;box-sizing:border-box;display:block}
 .thumb.ph{background:var(--band)}
 .thumb.ph svg{width:56px;height:56px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
 .thumb .photo-btn{position:absolute;right:10px;bottom:10px}
